@@ -1,0 +1,427 @@
+
+
+================================================================
+== Vivado HLS Report for 'gcd'
+================================================================
+* Date:           Thu Mar  1 11:17:58 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        GCD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.34|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- GCDWHILE      |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + MODULOWHILE  |    ?|    ?|         6|          -|          -|     ?|    no    |
+        +----------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 12
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!or_cond)
+	12  / (or_cond)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / (!tmp_17)
+	12  / (tmp_17)
+6 --> 
+	7  / true
+7 --> 
+	8  / (tmp_23)
+	4  / (!tmp_23)
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	6  / true
+12 --> 
+* FSM state operations: 
+
+ <State 1>: 6.79ns
+ST_1: n_read (7)  [1/1] 0.00ns
+:4  %n_read = call float @_ssdm_op_Read.ap_auto.float(float %n) nounwind
+
+ST_1: m_read (8)  [1/1] 0.00ns
+:5  %m_read = call float @_ssdm_op_Read.ap_auto.float(float %m) nounwind
+
+ST_1: m_to_int (9)  [1/1] 0.00ns
+:6  %m_to_int = bitcast float %m_read to i32
+
+ST_1: tmp (10)  [1/1] 0.00ns
+:7  %tmp = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %m_to_int, i32 23, i32 30)
+
+ST_1: tmp_1 (11)  [1/1] 0.00ns
+:8  %tmp_1 = trunc i32 %m_to_int to i23
+
+ST_1: notlhs (12)  [1/1] 2.91ns
+:9  %notlhs = icmp ne i8 %tmp, -1
+
+ST_1: notrhs (13)  [1/1] 3.20ns
+:10  %notrhs = icmp eq i23 %tmp_1, 0
+
+ST_1: tmp_2 (14)  [1/1] 2.07ns
+:11  %tmp_2 = or i1 %notrhs, %notlhs
+
+ST_1: tmp_3 (15)  [1/1] 6.79ns  loc: gcd.c:18
+:12  %tmp_3 = fcmp oeq float %m_read, 0.000000e+00
+
+ST_1: n_to_int (17)  [1/1] 0.00ns
+:14  %n_to_int = bitcast float %n_read to i32
+
+ST_1: tmp_5 (18)  [1/1] 0.00ns
+:15  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %n_to_int, i32 23, i32 30)
+
+ST_1: tmp_6 (19)  [1/1] 0.00ns
+:16  %tmp_6 = trunc i32 %n_to_int to i23
+
+ST_1: notlhs8 (20)  [1/1] 2.91ns
+:17  %notlhs8 = icmp ne i8 %tmp_5, -1
+
+ST_1: notrhs9 (21)  [1/1] 3.20ns
+:18  %notrhs9 = icmp eq i23 %tmp_6, 0
+
+ST_1: tmp_7 (22)  [1/1] 2.07ns
+:19  %tmp_7 = or i1 %notrhs9, %notlhs8
+
+ST_1: tmp_8 (23)  [1/1] 6.79ns  loc: gcd.c:18
+:20  %tmp_8 = fcmp oeq float %n_read, 0.000000e+00
+
+
+ <State 2>: 6.79ns
+ST_2: StgValue_29 (3)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(float %m) nounwind, !map !9
+
+ST_2: StgValue_30 (4)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(float %n) nounwind, !map !15
+
+ST_2: StgValue_31 (5)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(float 0.000000e+00) nounwind, !map !19
+
+ST_2: StgValue_32 (6)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @gcd_str) nounwind
+
+ST_2: tmp_4 (16)  [1/1] 0.00ns  loc: gcd.c:18 (grouped into LUT with out node or_cond)
+:13  %tmp_4 = and i1 %tmp_2, %tmp_3
+
+ST_2: tmp_9 (24)  [1/1] 0.00ns  loc: gcd.c:18 (grouped into LUT with out node or_cond)
+:21  %tmp_9 = and i1 %tmp_7, %tmp_8
+
+ST_2: or_cond (25)  [1/1] 2.07ns  loc: gcd.c:18 (out node of the LUT)
+:22  %or_cond = and i1 %tmp_4, %tmp_9
+
+ST_2: StgValue_36 (26)  [1/1] 1.59ns  loc: gcd.c:18
+:23  br i1 %or_cond, label %.loopexit, label %_ifconv
+
+ST_2: tmp_s (28)  [1/1] 6.79ns  loc: gcd.c:21
+_ifconv:0  %tmp_s = fcmp olt float %m_read, 0.000000e+00
+
+ST_2: tmp_11 (33)  [1/1] 6.79ns  loc: gcd.c:23
+_ifconv:5  %tmp_11 = fcmp olt float %n_read, 0.000000e+00
+
+
+ <State 3>: 3.66ns
+ST_3: tmp_10 (29)  [1/1] 0.00ns  loc: gcd.c:21 (grouped into LUT with out node m_assign_1)
+_ifconv:1  %tmp_10 = and i1 %tmp_2, %tmp_s
+
+ST_3: m_assign_neg (30)  [1/1] 0.00ns  loc: gcd.c:22 (grouped into LUT with out node m_assign_1)
+_ifconv:2  %m_assign_neg = xor i32 %m_to_int, -2147483648
+
+ST_3: m_assign (31)  [1/1] 0.00ns  loc: gcd.c:22 (grouped into LUT with out node m_assign_1)
+_ifconv:3  %m_assign = bitcast i32 %m_assign_neg to float
+
+ST_3: m_assign_1 (32)  [1/1] 2.07ns  loc: gcd.c:21 (out node of the LUT)
+_ifconv:4  %m_assign_1 = select i1 %tmp_10, float %m_assign, float %m_read
+
+ST_3: tmp_12 (34)  [1/1] 0.00ns  loc: gcd.c:23 (grouped into LUT with out node n_assign_1)
+_ifconv:6  %tmp_12 = and i1 %tmp_7, %tmp_11
+
+ST_3: n_assign_neg (35)  [1/1] 0.00ns  loc: gcd.c:24 (grouped into LUT with out node n_assign_1)
+_ifconv:7  %n_assign_neg = xor i32 %n_to_int, -2147483648
+
+ST_3: n_assign (36)  [1/1] 0.00ns  loc: gcd.c:24 (grouped into LUT with out node n_assign_1)
+_ifconv:8  %n_assign = bitcast i32 %n_assign_neg to float
+
+ST_3: n_assign_1 (37)  [1/1] 2.07ns  loc: gcd.c:23 (out node of the LUT)
+_ifconv:9  %n_assign_1 = select i1 %tmp_12, float %n_assign, float %n_read
+
+ST_3: StgValue_47 (38)  [1/1] 1.59ns  loc: gcd.c:29
+_ifconv:10  br label %.preheader
+
+
+ <State 4>: 6.79ns
+ST_4: m_assign_3 (40)  [1/1] 0.00ns
+.preheader:0  %m_assign_3 = phi float [ %n_assign_1, %_ifconv ], [ %r, %.preheader.loopexit ]
+
+ST_4: tmp_16 (48)  [1/1] 6.79ns  loc: gcd.c:27
+.preheader:8  %tmp_16 = fcmp oeq float %m_assign_3, 0.000000e+00
+
+
+ <State 5>: 7.34ns
+ST_5: result (41)  [1/1] 0.00ns  loc: gcd.c:21
+.preheader:1  %result = phi float [ %m_assign_1, %_ifconv ], [ %m_assign_3, %.preheader.loopexit ]
+
+ST_5: m_assign_2_to_int (42)  [1/1] 0.00ns  loc: gcd.c:23
+.preheader:2  %m_assign_2_to_int = bitcast float %m_assign_3 to i32
+
+ST_5: tmp_13 (43)  [1/1] 0.00ns  loc: gcd.c:23
+.preheader:3  %tmp_13 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %m_assign_2_to_int, i32 23, i32 30)
+
+ST_5: tmp_14 (44)  [1/1] 0.00ns  loc: gcd.c:23
+.preheader:4  %tmp_14 = trunc i32 %m_assign_2_to_int to i23
+
+ST_5: notlhs3 (45)  [1/1] 2.91ns  loc: gcd.c:23
+.preheader:5  %notlhs3 = icmp ne i8 %tmp_13, -1
+
+ST_5: notrhs3 (46)  [1/1] 3.20ns  loc: gcd.c:23
+.preheader:6  %notrhs3 = icmp eq i23 %tmp_14, 0
+
+ST_5: tmp_15 (47)  [1/1] 2.07ns  loc: gcd.c:23
+.preheader:7  %tmp_15 = or i1 %notrhs3, %notlhs3
+
+ST_5: tmp_17 (49)  [1/1] 2.07ns  loc: gcd.c:27
+.preheader:9  %tmp_17 = and i1 %tmp_15, %tmp_16
+
+ST_5: StgValue_58 (50)  [1/1] 0.00ns  loc: gcd.c:27
+.preheader:10  br i1 %tmp_17, label %.loopexit.loopexit, label %1
+
+ST_5: StgValue_59 (52)  [1/1] 0.00ns  loc: gcd.c:27
+:0  call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str1) nounwind
+
+ST_5: StgValue_60 (53)  [1/1] 1.59ns  loc: gcd.c:8->gcd.c:28
+:1  br label %2
+
+ST_5: StgValue_61 (73)  [1/1] 1.59ns
+.loopexit.loopexit:0  br label %.loopexit
+
+
+ <State 6>: 6.79ns
+ST_6: r (55)  [1/1] 0.00ns
+:0  %r = phi float [ %result, %1 ], [ %result_1, %3 ]
+
+ST_6: tmp_22 (63)  [1/1] 6.79ns  loc: gcd.c:8->gcd.c:28
+:8  %tmp_22 = fcmp oge float %r, %m_assign_3
+
+
+ <State 7>: 7.26ns
+ST_7: n_assign_2_to_int (56)  [1/1] 0.00ns  loc: gcd.c:21
+:1  %n_assign_2_to_int = bitcast float %r to i32
+
+ST_7: tmp_18 (57)  [1/1] 0.00ns  loc: gcd.c:21
+:2  %tmp_18 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %n_assign_2_to_int, i32 23, i32 30)
+
+ST_7: tmp_19 (58)  [1/1] 0.00ns  loc: gcd.c:21
+:3  %tmp_19 = trunc i32 %n_assign_2_to_int to i23
+
+ST_7: notlhs4 (59)  [1/1] 2.91ns  loc: gcd.c:21
+:4  %notlhs4 = icmp ne i8 %tmp_18, -1
+
+ST_7: notrhs4 (60)  [1/1] 3.20ns  loc: gcd.c:21
+:5  %notrhs4 = icmp eq i23 %tmp_19, 0
+
+ST_7: tmp_20 (61)  [1/1] 0.00ns  loc: gcd.c:21 (grouped into LUT with out node tmp_23)
+:6  %tmp_20 = or i1 %notrhs4, %notlhs4
+
+ST_7: tmp_21 (62)  [1/1] 0.00ns  loc: gcd.c:21 (grouped into LUT with out node tmp_23)
+:7  %tmp_21 = and i1 %tmp_20, %tmp_15
+
+ST_7: tmp_23 (64)  [1/1] 2.07ns  loc: gcd.c:8->gcd.c:28 (out node of the LUT)
+:9  %tmp_23 = and i1 %tmp_21, %tmp_22
+
+ST_7: StgValue_72 (65)  [1/1] 0.00ns  loc: gcd.c:8->gcd.c:28
+:10  br i1 %tmp_23, label %3, label %.preheader.loopexit
+
+ST_7: result_1 (68)  [5/5] 7.26ns  loc: gcd.c:9->gcd.c:28
+:1  %result_1 = fsub float %r, %m_assign_3
+
+ST_7: StgValue_74 (71)  [1/1] 0.00ns
+.preheader.loopexit:0  br label %.preheader
+
+
+ <State 8>: 7.26ns
+ST_8: result_1 (68)  [4/5] 7.26ns  loc: gcd.c:9->gcd.c:28
+:1  %result_1 = fsub float %r, %m_assign_3
+
+
+ <State 9>: 7.26ns
+ST_9: result_1 (68)  [3/5] 7.26ns  loc: gcd.c:9->gcd.c:28
+:1  %result_1 = fsub float %r, %m_assign_3
+
+
+ <State 10>: 7.26ns
+ST_10: result_1 (68)  [2/5] 7.26ns  loc: gcd.c:9->gcd.c:28
+:1  %result_1 = fsub float %r, %m_assign_3
+
+
+ <State 11>: 7.26ns
+ST_11: StgValue_78 (67)  [1/1] 0.00ns  loc: gcd.c:9->gcd.c:28
+:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str) nounwind
+
+ST_11: result_1 (68)  [1/5] 7.26ns  loc: gcd.c:9->gcd.c:28
+:1  %result_1 = fsub float %r, %m_assign_3
+
+ST_11: StgValue_80 (69)  [1/1] 0.00ns  loc: gcd.c:9->gcd.c:28
+:2  br label %2
+
+
+ <State 12>: 0.00ns
+ST_12: p_0 (75)  [1/1] 0.00ns
+.loopexit:0  %p_0 = phi float [ -1.000000e+00, %0 ], [ %result, %.loopexit.loopexit ]
+
+ST_12: StgValue_82 (76)  [1/1] 0.00ns  loc: gcd.c:34
+.loopexit:1  ret float %p_0
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 6.79ns
+The critical path consists of the following:
+	wire read on port 'n' [7]  (0 ns)
+	'fcmp' operation ('tmp_8', gcd.c:18) [23]  (6.79 ns)
+
+ <State 2>: 6.79ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_s', gcd.c:21) [28]  (6.79 ns)
+
+ <State 3>: 3.66ns
+The critical path consists of the following:
+	'and' operation ('tmp_10', gcd.c:21) [29]  (0 ns)
+	'select' operation ('m', gcd.c:21) [32]  (2.07 ns)
+	multiplexor before 'phi' operation ('r') with incoming values : ('m', gcd.c:21) ('n', gcd.c:23) ('result', gcd.c:9->gcd.c:28) [40]  (1.59 ns)
+
+ <State 4>: 6.79ns
+The critical path consists of the following:
+	'phi' operation ('r') with incoming values : ('m', gcd.c:21) ('n', gcd.c:23) ('result', gcd.c:9->gcd.c:28) [40]  (0 ns)
+	'fcmp' operation ('tmp_16', gcd.c:27) [48]  (6.79 ns)
+
+ <State 5>: 7.34ns
+The critical path consists of the following:
+	'icmp' operation ('notrhs3', gcd.c:23) [46]  (3.2 ns)
+	'or' operation ('tmp_15', gcd.c:23) [47]  (2.07 ns)
+	'and' operation ('tmp_17', gcd.c:27) [49]  (2.07 ns)
+
+ <State 6>: 6.79ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('m', gcd.c:21) ('n', gcd.c:23) ('result', gcd.c:9->gcd.c:28) [55]  (0 ns)
+	'fcmp' operation ('tmp_22', gcd.c:8->gcd.c:28) [63]  (6.79 ns)
+
+ <State 7>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('result', gcd.c:9->gcd.c:28) [68]  (7.26 ns)
+
+ <State 8>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('result', gcd.c:9->gcd.c:28) [68]  (7.26 ns)
+
+ <State 9>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('result', gcd.c:9->gcd.c:28) [68]  (7.26 ns)
+
+ <State 10>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('result', gcd.c:9->gcd.c:28) [68]  (7.26 ns)
+
+ <State 11>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('result', gcd.c:9->gcd.c:28) [68]  (7.26 ns)
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

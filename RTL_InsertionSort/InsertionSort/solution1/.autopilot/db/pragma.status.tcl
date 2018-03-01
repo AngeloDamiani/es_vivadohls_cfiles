@@ -1,0 +1,2 @@
+lappend pragmaStatus0 {pragma "LOOP_TRIPCOUNT" source "/home/elva/Documents/ProgettoEmbedded/VivadoHLS/InsertionSort/insertion_sort.c" location "insertion_sort/WHILE_LOOP" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "ARRAY_PARTITION" source "/home/elva/Documents/ProgettoEmbedded/VivadoHLS/InsertionSort/insertion_sort.c" location "insertion_sort" found 1 funcFound 1 applied 1 ambiguous 0 reason "null" variable "arr"}

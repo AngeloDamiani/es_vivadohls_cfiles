@@ -1,0 +1,7 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "ip/xil_defaultlib/insertion_sort_ap_fcmp_0_no_dsp_32.vhd"
+vhdl xil_defaultlib "insertion_sort.autotb.vhd"
+vhdl xil_defaultlib "insertion_sort.vhd"
+vhdl xil_defaultlib "insertion_sort_mucud.vhd"
+vhdl xil_defaultlib "insertion_sort_fcbkb.vhd"
+

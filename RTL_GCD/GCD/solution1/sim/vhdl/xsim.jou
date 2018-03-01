@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Mar  1 11:18:56 2018
+# Process ID: 28927
+# Current directory: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/GCD/solution1/sim/vhdl
+# Command line: xsim -mode tcl -source {xsim.dir/gcd/xsim_script.tcl}
+# Log file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/GCD/solution1/sim/vhdl/xsim.log
+# Journal file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/GCD/solution1/sim/vhdl/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/gcd/xsim_script.tcl
+source gcd.tcl

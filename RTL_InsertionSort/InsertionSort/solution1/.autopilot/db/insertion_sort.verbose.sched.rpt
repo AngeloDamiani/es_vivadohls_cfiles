@@ -1,0 +1,597 @@
+
+
+================================================================
+== Vivado HLS Report for 'insertion_sort'
+================================================================
+* Date:           Thu Mar  1 10:45:26 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        InsertionSort
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.37|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   28|  325|   29|  326|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+-----+-----+----------+-----------+-----------+--------+----------+
+        |               |  Latency  | Iteration|  Initiation Interval  |  Trip  |          |
+        |   Loop Name   | min | max |  Latency |  achieved |   target  |  Count | Pipelined|
+        +---------------+-----+-----+----------+-----------+-----------+--------+----------+
+        |- FOR_LOOP     |   27|  324|  3 ~ 36  |          -|          -|       9|    no    |
+        | + WHILE_LOOP  |    0|   32|         3|          -|          -| 0 ~ 10 |    no    |
+        +---------------+-----+-----+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond)
+3 --> 
+	4  / true
+4 --> 
+	5  / (tmp_1)
+	6  / (!tmp_1)
+5 --> 
+	6  / true
+6 --> 
+	4  / (tmp_1 & tmp_21)
+	2  / (!tmp_1) | (!tmp_21)
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_7 (11)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(float* %arr_9), !map !7
+
+ST_1: StgValue_8 (12)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(float* %arr_8), !map !13
+
+ST_1: StgValue_9 (13)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(float* %arr_7), !map !19
+
+ST_1: StgValue_10 (14)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(float* %arr_6), !map !25
+
+ST_1: StgValue_11 (15)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(float* %arr_5), !map !31
+
+ST_1: StgValue_12 (16)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(float* %arr_4), !map !37
+
+ST_1: StgValue_13 (17)  [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(float* %arr_3), !map !43
+
+ST_1: StgValue_14 (18)  [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(float* %arr_2), !map !49
+
+ST_1: StgValue_15 (19)  [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap(float* %arr_1), !map !55
+
+ST_1: StgValue_16 (20)  [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(float* %arr_0), !map !61
+
+ST_1: StgValue_17 (21)  [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecTopModule([15 x i8]* @insertion_sort_str) nounwind
+
+ST_1: StgValue_18 (22)  [1/1] 1.59ns  loc: insertion_sort.c:7
+:11  br label %1
+
+
+ <State 2>: 7.24ns
+ST_2: i (24)  [1/1] 0.00ns
+:0  %i = phi i4 [ 1, %0 ], [ %i_1, %.critedge10 ]
+
+ST_2: i_cast (25)  [1/1] 0.00ns  loc: insertion_sort.c:7
+:1  %i_cast = zext i4 %i to i5
+
+ST_2: exitcond (26)  [1/1] 3.10ns  loc: insertion_sort.c:7
+:2  %exitcond = icmp eq i4 %i, -6
+
+ST_2: StgValue_22 (27)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 9, i64 9, i64 9)
+
+ST_2: StgValue_23 (28)  [1/1] 0.00ns  loc: insertion_sort.c:7
+:4  br i1 %exitcond, label %6, label %_ifconv
+
+ST_2: arr_9_read (32)  [1/1] 0.00ns  loc: insertion_sort.c:8
+_ifconv:2  %arr_9_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %arr_9)
+
+ST_2: arr_1_read (33)  [1/1] 0.00ns  loc: insertion_sort.c:8
+_ifconv:3  %arr_1_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %arr_1)
+
+ST_2: arr_2_read (34)  [1/1] 0.00ns  loc: insertion_sort.c:8
+_ifconv:4  %arr_2_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %arr_2)
+
+ST_2: arr_3_read (35)  [1/1] 0.00ns  loc: insertion_sort.c:8
+_ifconv:5  %arr_3_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %arr_3)
+
+ST_2: arr_4_read (36)  [1/1] 0.00ns  loc: insertion_sort.c:8
+_ifconv:6  %arr_4_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %arr_4)
+
+ST_2: sel_tmp (41)  [1/1] 3.10ns  loc: insertion_sort.c:8
+_ifconv:11  %sel_tmp = icmp eq i4 %i, 1
+
+ST_2: sel_tmp1 (42)  [1/1] 0.00ns  loc: insertion_sort.c:8 (grouped into LUT with out node sel_tmp3)
+_ifconv:12  %sel_tmp1 = select i1 %sel_tmp, float %arr_1_read, float %arr_9_read
+
+ST_2: sel_tmp2 (43)  [1/1] 3.10ns  loc: insertion_sort.c:8
+_ifconv:13  %sel_tmp2 = icmp eq i4 %i, 2
+
+ST_2: sel_tmp3 (44)  [1/1] 2.07ns  loc: insertion_sort.c:8 (out node of the LUT)
+_ifconv:14  %sel_tmp3 = select i1 %sel_tmp2, float %arr_2_read, float %sel_tmp1
+
+ST_2: sel_tmp4 (45)  [1/1] 3.10ns  loc: insertion_sort.c:8
+_ifconv:15  %sel_tmp4 = icmp eq i4 %i, 3
+
+ST_2: sel_tmp5 (46)  [1/1] 0.00ns  loc: insertion_sort.c:8 (grouped into LUT with out node sel_tmp7)
+_ifconv:16  %sel_tmp5 = select i1 %sel_tmp4, float %arr_3_read, float %sel_tmp3
+
+ST_2: sel_tmp6 (47)  [1/1] 3.10ns  loc: insertion_sort.c:8
+_ifconv:17  %sel_tmp6 = icmp eq i4 %i, 4
+
+ST_2: sel_tmp7 (48)  [1/1] 2.07ns  loc: insertion_sort.c:8 (out node of the LUT)
+_ifconv:18  %sel_tmp7 = select i1 %sel_tmp6, float %arr_4_read, float %sel_tmp5
+
+ST_2: sel_tmp8 (49)  [1/1] 3.10ns  loc: insertion_sort.c:8
+_ifconv:19  %sel_tmp8 = icmp eq i4 %i, 5
+
+ST_2: sel_tmp10 (51)  [1/1] 3.10ns  loc: insertion_sort.c:8
+_ifconv:21  %sel_tmp10 = icmp eq i4 %i, 6
+
+ST_2: StgValue_39 (174)  [1/1] 0.00ns  loc: insertion_sort.c:19
+:0  ret void
+
+
+ <State 3>: 8.37ns
+ST_3: StgValue_40 (30)  [1/1] 0.00ns  loc: insertion_sort.c:7
+_ifconv:0  call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str2) nounwind
+
+ST_3: tmp (31)  [1/1] 0.00ns  loc: insertion_sort.c:7
+_ifconv:1  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str2) nounwind
+
+ST_3: arr_5_read (37)  [1/1] 0.00ns  loc: insertion_sort.c:8
+_ifconv:7  %arr_5_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %arr_5)
+
+ST_3: arr_6_read (38)  [1/1] 0.00ns  loc: insertion_sort.c:8
+_ifconv:8  %arr_6_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %arr_6)
+
+ST_3: arr_7_read (39)  [1/1] 0.00ns  loc: insertion_sort.c:8
+_ifconv:9  %arr_7_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %arr_7)
+
+ST_3: arr_8_read (40)  [1/1] 0.00ns  loc: insertion_sort.c:8
+_ifconv:10  %arr_8_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %arr_8)
+
+ST_3: sel_tmp9 (50)  [1/1] 0.00ns  loc: insertion_sort.c:8 (grouped into LUT with out node sel_tmp11)
+_ifconv:20  %sel_tmp9 = select i1 %sel_tmp8, float %arr_5_read, float %sel_tmp7
+
+ST_3: sel_tmp11 (52)  [1/1] 2.07ns  loc: insertion_sort.c:8 (out node of the LUT)
+_ifconv:22  %sel_tmp11 = select i1 %sel_tmp10, float %arr_6_read, float %sel_tmp9
+
+ST_3: sel_tmp12 (53)  [1/1] 3.10ns  loc: insertion_sort.c:8
+_ifconv:23  %sel_tmp12 = icmp eq i4 %i, 7
+
+ST_3: sel_tmp13 (54)  [1/1] 0.00ns  loc: insertion_sort.c:8 (grouped into LUT with out node key)
+_ifconv:24  %sel_tmp13 = select i1 %sel_tmp12, float %arr_7_read, float %sel_tmp11
+
+ST_3: sel_tmp14 (55)  [1/1] 3.10ns  loc: insertion_sort.c:8
+_ifconv:25  %sel_tmp14 = icmp eq i4 %i, -8
+
+ST_3: key (56)  [1/1] 2.07ns  loc: insertion_sort.c:8 (out node of the LUT)
+_ifconv:26  %key = select i1 %sel_tmp14, float %arr_8_read, float %sel_tmp13
+
+ST_3: key_to_int (57)  [1/1] 0.00ns  loc: insertion_sort.c:8
+_ifconv:27  %key_to_int = bitcast float %key to i32
+
+ST_3: tmp_4 (58)  [1/1] 0.00ns  loc: insertion_sort.c:8
+_ifconv:28  %tmp_4 = trunc i32 %key_to_int to i23
+
+ST_3: notrhs1 (59)  [1/1] 3.20ns  loc: insertion_sort.c:8
+_ifconv:29  %notrhs1 = icmp eq i23 %tmp_4, 0
+
+ST_3: StgValue_55 (60)  [1/1] 1.59ns  loc: insertion_sort.c:12
+_ifconv:30  br label %2
+
+
+ <State 4>: 4.98ns
+ST_4: tmp_2 (62)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:0  %tmp_2 = phi float [ %arr_9_read, %_ifconv ], [ %tmp_22, %5 ]
+
+ST_4: tmp_3 (63)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:1  %tmp_3 = phi float [ %arr_8_read, %_ifconv ], [ %tmp_23, %5 ]
+
+ST_4: tmp_5 (64)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:2  %tmp_5 = phi float [ %arr_7_read, %_ifconv ], [ %tmp_24, %5 ]
+
+ST_4: tmp_7 (65)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:3  %tmp_7 = phi float [ %arr_6_read, %_ifconv ], [ %tmp_25, %5 ]
+
+ST_4: tmp_8 (66)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:4  %tmp_8 = phi float [ %arr_5_read, %_ifconv ], [ %tmp_26, %5 ]
+
+ST_4: tmp_9 (67)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:5  %tmp_9 = phi float [ %arr_4_read, %_ifconv ], [ %tmp_27, %5 ]
+
+ST_4: tmp_s (68)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:6  %tmp_s = phi float [ %arr_3_read, %_ifconv ], [ %tmp_28, %5 ]
+
+ST_4: tmp_10 (69)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:7  %tmp_10 = phi float [ %arr_2_read, %_ifconv ], [ %tmp_29, %5 ]
+
+ST_4: tmp_11 (70)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:8  %tmp_11 = phi float [ %arr_1_read, %_ifconv ], [ %tmp_30, %5 ]
+
+ST_4: j_0_in (71)  [1/1] 0.00ns
+:9  %j_0_in = phi i5 [ %i_cast, %_ifconv ], [ %j, %5 ]
+
+ST_4: tmp_12 (72)  [1/1] 0.00ns  loc: insertion_sort.c:7
+:10  %tmp_12 = trunc i5 %j_0_in to i4
+
+ST_4: j (73)  [1/1] 2.33ns  loc: insertion_sort.c:9
+:11  %j = add i5 -1, %j_0_in
+
+ST_4: tmp_1 (74)  [1/1] 3.31ns  loc: insertion_sort.c:12
+:12  %tmp_1 = icmp sgt i5 %j_0_in, 0
+
+ST_4: StgValue_69 (75)  [1/1] 0.00ns  loc: insertion_sort.c:12
+:13  br i1 %tmp_1, label %3, label %.critedge
+
+ST_4: j_t (77)  [1/1] 2.35ns  loc: insertion_sort.c:7
+:0  %j_t = add i4 -1, %tmp_12
+
+ST_4: arr_0_read (78)  [1/1] 0.00ns
+:1  %arr_0_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %arr_0)
+
+ST_4: tmp_13 (79)  [1/1] 2.63ns  loc: insertion_sort.c:8
+:2  %tmp_13 = call float @_ssdm_op_Mux.ap_auto.10float.i4(float %arr_0_read, float %tmp_11, float %tmp_10, float %tmp_s, float %tmp_9, float %tmp_8, float %tmp_7, float %tmp_5, float %tmp_3, float %tmp_2, i4 %j_t)
+
+ST_4: tmp_16 (83)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:6  %tmp_16 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %key_to_int, i32 23, i32 30)
+
+ST_4: notlhs1 (87)  [1/1] 2.91ns  loc: insertion_sort.c:8
+:10  %notlhs1 = icmp ne i8 %tmp_16, -1
+
+
+ <State 5>: 6.79ns
+ST_5: tmp_20 (90)  [1/1] 6.79ns  loc: insertion_sort.c:12
+:13  %tmp_20 = fcmp ogt float %tmp_13, %key
+
+
+ <State 6>: 5.27ns
+ST_6: p_to_int (80)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:3  %p_to_int = bitcast float %tmp_13 to i32
+
+ST_6: tmp_14 (81)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:4  %tmp_14 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %p_to_int, i32 23, i32 30)
+
+ST_6: tmp_15 (82)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:5  %tmp_15 = trunc i32 %p_to_int to i23
+
+ST_6: notlhs (84)  [1/1] 2.91ns  loc: insertion_sort.c:8
+:7  %notlhs = icmp ne i8 %tmp_14, -1
+
+ST_6: notrhs (85)  [1/1] 3.20ns  loc: insertion_sort.c:8
+:8  %notrhs = icmp eq i23 %tmp_15, 0
+
+ST_6: tmp_17 (86)  [1/1] 0.00ns  loc: insertion_sort.c:8 (grouped into LUT with out node tmp_21)
+:9  %tmp_17 = or i1 %notrhs, %notlhs
+
+ST_6: tmp_18 (88)  [1/1] 0.00ns  loc: insertion_sort.c:8 (grouped into LUT with out node tmp_21)
+:11  %tmp_18 = or i1 %notrhs1, %notlhs1
+
+ST_6: tmp_19 (89)  [1/1] 0.00ns  loc: insertion_sort.c:8 (grouped into LUT with out node tmp_21)
+:12  %tmp_19 = and i1 %tmp_17, %tmp_18
+
+ST_6: tmp_21 (91)  [1/1] 2.07ns  loc: insertion_sort.c:12 (out node of the LUT)
+:14  %tmp_21 = and i1 %tmp_19, %tmp_20
+
+ST_6: StgValue_85 (92)  [1/1] 0.00ns  loc: insertion_sort.c:12
+:15  br i1 %tmp_21, label %4, label %.critedge
+
+ST_6: StgValue_86 (94)  [1/1] 0.00ns  loc: insertion_sort.c:12
+:0  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str3) nounwind
+
+ST_6: tmp_6 (95)  [1/1] 0.00ns  loc: insertion_sort.c:12
+:1  %tmp_6 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str3) nounwind
+
+ST_6: StgValue_88 (96)  [1/1] 0.00ns  loc: insertion_sort.c:13
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 10, i32 5, [1 x i8]* @p_str1) nounwind
+
+ST_6: StgValue_89 (97)  [1/1] 3.31ns  loc: insertion_sort.c:14
+:3  switch i4 %tmp_12, label %branch19 [
+    i4 1, label %branch11
+    i4 2, label %branch12
+    i4 3, label %branch13
+    i4 4, label %branch14
+    i4 5, label %branch15
+    i4 6, label %branch16
+    i4 7, label %branch17
+    i4 -8, label %branch18
+  ]
+
+ST_6: StgValue_90 (99)  [1/1] 0.00ns  loc: insertion_sort.c:14
+branch18:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_8, float %tmp_13)
+
+ST_6: StgValue_91 (100)  [1/1] 1.59ns  loc: insertion_sort.c:14
+branch18:1  br label %5
+
+ST_6: StgValue_92 (102)  [1/1] 0.00ns  loc: insertion_sort.c:14
+branch17:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_7, float %tmp_13)
+
+ST_6: StgValue_93 (103)  [1/1] 1.59ns  loc: insertion_sort.c:14
+branch17:1  br label %5
+
+ST_6: StgValue_94 (105)  [1/1] 0.00ns  loc: insertion_sort.c:14
+branch16:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_6, float %tmp_13)
+
+ST_6: StgValue_95 (106)  [1/1] 1.59ns  loc: insertion_sort.c:14
+branch16:1  br label %5
+
+ST_6: StgValue_96 (108)  [1/1] 0.00ns  loc: insertion_sort.c:14
+branch15:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_5, float %tmp_13)
+
+ST_6: StgValue_97 (109)  [1/1] 1.59ns  loc: insertion_sort.c:14
+branch15:1  br label %5
+
+ST_6: StgValue_98 (111)  [1/1] 0.00ns  loc: insertion_sort.c:14
+branch14:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_4, float %tmp_13)
+
+ST_6: StgValue_99 (112)  [1/1] 1.59ns  loc: insertion_sort.c:14
+branch14:1  br label %5
+
+ST_6: StgValue_100 (114)  [1/1] 0.00ns  loc: insertion_sort.c:14
+branch13:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_3, float %tmp_13)
+
+ST_6: StgValue_101 (115)  [1/1] 1.59ns  loc: insertion_sort.c:14
+branch13:1  br label %5
+
+ST_6: StgValue_102 (117)  [1/1] 0.00ns  loc: insertion_sort.c:14
+branch12:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_2, float %tmp_13)
+
+ST_6: StgValue_103 (118)  [1/1] 1.59ns  loc: insertion_sort.c:14
+branch12:1  br label %5
+
+ST_6: StgValue_104 (120)  [1/1] 0.00ns  loc: insertion_sort.c:14
+branch11:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_1, float %tmp_13)
+
+ST_6: StgValue_105 (121)  [1/1] 1.59ns  loc: insertion_sort.c:14
+branch11:1  br label %5
+
+ST_6: StgValue_106 (123)  [1/1] 0.00ns  loc: insertion_sort.c:14
+branch19:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_9, float %tmp_13)
+
+ST_6: StgValue_107 (124)  [1/1] 1.59ns  loc: insertion_sort.c:14
+branch19:1  br label %5
+
+ST_6: tmp_22 (126)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:0  %tmp_22 = phi float [ %tmp_13, %branch19 ], [ %tmp_2, %branch18 ], [ %tmp_2, %branch17 ], [ %tmp_2, %branch16 ], [ %tmp_2, %branch15 ], [ %tmp_2, %branch14 ], [ %tmp_2, %branch13 ], [ %tmp_2, %branch12 ], [ %tmp_2, %branch11 ]
+
+ST_6: tmp_23 (127)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:1  %tmp_23 = phi float [ %tmp_3, %branch19 ], [ %tmp_13, %branch18 ], [ %tmp_3, %branch17 ], [ %tmp_3, %branch16 ], [ %tmp_3, %branch15 ], [ %tmp_3, %branch14 ], [ %tmp_3, %branch13 ], [ %tmp_3, %branch12 ], [ %tmp_3, %branch11 ]
+
+ST_6: tmp_24 (128)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:2  %tmp_24 = phi float [ %tmp_5, %branch19 ], [ %tmp_5, %branch18 ], [ %tmp_13, %branch17 ], [ %tmp_5, %branch16 ], [ %tmp_5, %branch15 ], [ %tmp_5, %branch14 ], [ %tmp_5, %branch13 ], [ %tmp_5, %branch12 ], [ %tmp_5, %branch11 ]
+
+ST_6: tmp_25 (129)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:3  %tmp_25 = phi float [ %tmp_7, %branch19 ], [ %tmp_7, %branch18 ], [ %tmp_7, %branch17 ], [ %tmp_13, %branch16 ], [ %tmp_7, %branch15 ], [ %tmp_7, %branch14 ], [ %tmp_7, %branch13 ], [ %tmp_7, %branch12 ], [ %tmp_7, %branch11 ]
+
+ST_6: tmp_26 (130)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:4  %tmp_26 = phi float [ %tmp_8, %branch19 ], [ %tmp_8, %branch18 ], [ %tmp_8, %branch17 ], [ %tmp_8, %branch16 ], [ %tmp_13, %branch15 ], [ %tmp_8, %branch14 ], [ %tmp_8, %branch13 ], [ %tmp_8, %branch12 ], [ %tmp_8, %branch11 ]
+
+ST_6: tmp_27 (131)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:5  %tmp_27 = phi float [ %tmp_9, %branch19 ], [ %tmp_9, %branch18 ], [ %tmp_9, %branch17 ], [ %tmp_9, %branch16 ], [ %tmp_9, %branch15 ], [ %tmp_13, %branch14 ], [ %tmp_9, %branch13 ], [ %tmp_9, %branch12 ], [ %tmp_9, %branch11 ]
+
+ST_6: tmp_28 (132)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:6  %tmp_28 = phi float [ %tmp_s, %branch19 ], [ %tmp_s, %branch18 ], [ %tmp_s, %branch17 ], [ %tmp_s, %branch16 ], [ %tmp_s, %branch15 ], [ %tmp_s, %branch14 ], [ %tmp_13, %branch13 ], [ %tmp_s, %branch12 ], [ %tmp_s, %branch11 ]
+
+ST_6: tmp_29 (133)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:7  %tmp_29 = phi float [ %tmp_10, %branch19 ], [ %tmp_10, %branch18 ], [ %tmp_10, %branch17 ], [ %tmp_10, %branch16 ], [ %tmp_10, %branch15 ], [ %tmp_10, %branch14 ], [ %tmp_10, %branch13 ], [ %tmp_13, %branch12 ], [ %tmp_10, %branch11 ]
+
+ST_6: tmp_30 (134)  [1/1] 0.00ns  loc: insertion_sort.c:8
+:8  %tmp_30 = phi float [ %tmp_11, %branch19 ], [ %tmp_11, %branch18 ], [ %tmp_11, %branch17 ], [ %tmp_11, %branch16 ], [ %tmp_11, %branch15 ], [ %tmp_11, %branch14 ], [ %tmp_11, %branch13 ], [ %tmp_11, %branch12 ], [ %tmp_13, %branch11 ]
+
+ST_6: empty (135)  [1/1] 0.00ns  loc: insertion_sort.c:16
+:9  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str3, i32 %tmp_6) nounwind
+
+ST_6: StgValue_118 (136)  [1/1] 0.00ns  loc: insertion_sort.c:16
+:10  br label %2
+
+ST_6: StgValue_119 (138)  [1/1] 3.31ns  loc: insertion_sort.c:17
+.critedge:0  switch i4 %tmp_12, label %branch9 [
+    i4 0, label %branch0
+    i4 1, label %branch1
+    i4 2, label %branch2
+    i4 3, label %branch3
+    i4 4, label %branch4
+    i4 5, label %branch5
+    i4 6, label %branch6
+    i4 7, label %branch7
+    i4 -8, label %branch8
+  ]
+
+ST_6: StgValue_120 (140)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch8:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_8, float %key)
+
+ST_6: StgValue_121 (141)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch8:1  br label %.critedge10
+
+ST_6: StgValue_122 (143)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch7:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_7, float %key)
+
+ST_6: StgValue_123 (144)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch7:1  br label %.critedge10
+
+ST_6: StgValue_124 (146)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch6:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_6, float %key)
+
+ST_6: StgValue_125 (147)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch6:1  br label %.critedge10
+
+ST_6: StgValue_126 (149)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch5:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_5, float %key)
+
+ST_6: StgValue_127 (150)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch5:1  br label %.critedge10
+
+ST_6: StgValue_128 (152)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch4:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_4, float %key)
+
+ST_6: StgValue_129 (153)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch4:1  br label %.critedge10
+
+ST_6: StgValue_130 (155)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch3:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_3, float %key)
+
+ST_6: StgValue_131 (156)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch3:1  br label %.critedge10
+
+ST_6: StgValue_132 (158)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch2:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_2, float %key)
+
+ST_6: StgValue_133 (159)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch2:1  br label %.critedge10
+
+ST_6: StgValue_134 (161)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch1:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_1, float %key)
+
+ST_6: StgValue_135 (162)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch1:1  br label %.critedge10
+
+ST_6: StgValue_136 (164)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch0:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_0, float %key)
+
+ST_6: StgValue_137 (165)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch0:1  br label %.critedge10
+
+ST_6: StgValue_138 (167)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch9:0  call void @_ssdm_op_Write.ap_auto.floatP(float* %arr_9, float %key)
+
+ST_6: StgValue_139 (168)  [1/1] 0.00ns  loc: insertion_sort.c:17
+branch9:1  br label %.critedge10
+
+ST_6: empty_4 (170)  [1/1] 0.00ns  loc: insertion_sort.c:18
+.critedge10:0  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str2, i32 %tmp) nounwind
+
+ST_6: i_1 (171)  [1/1] 2.35ns  loc: insertion_sort.c:7
+.critedge10:1  %i_1 = add i4 %i, 1
+
+ST_6: StgValue_142 (172)  [1/1] 0.00ns  loc: insertion_sort.c:7
+.critedge10:2  br label %1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', insertion_sort.c:7) [24]  (1.59 ns)
+
+ <State 2>: 7.24ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', insertion_sort.c:7) [24]  (0 ns)
+	'icmp' operation ('sel_tmp', insertion_sort.c:8) [41]  (3.1 ns)
+	'select' operation ('sel_tmp1', insertion_sort.c:8) [42]  (0 ns)
+	'select' operation ('sel_tmp3', insertion_sort.c:8) [44]  (2.07 ns)
+	'select' operation ('sel_tmp5', insertion_sort.c:8) [46]  (0 ns)
+	'select' operation ('sel_tmp7', insertion_sort.c:8) [48]  (2.07 ns)
+
+ <State 3>: 8.37ns
+The critical path consists of the following:
+	'icmp' operation ('sel_tmp12', insertion_sort.c:8) [53]  (3.1 ns)
+	'select' operation ('sel_tmp13', insertion_sort.c:8) [54]  (0 ns)
+	'select' operation ('key', insertion_sort.c:8) [56]  (2.07 ns)
+	'icmp' operation ('notrhs1', insertion_sort.c:8) [59]  (3.2 ns)
+
+ <State 4>: 4.98ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('i_cast', insertion_sort.c:7) ('j', insertion_sort.c:9) [71]  (0 ns)
+	'add' operation ('j_t', insertion_sort.c:7) [77]  (2.35 ns)
+	'mux' operation ('tmp_13', insertion_sort.c:8) [79]  (2.63 ns)
+
+ <State 5>: 6.79ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_20', insertion_sort.c:12) [90]  (6.79 ns)
+
+ <State 6>: 5.27ns
+The critical path consists of the following:
+	'icmp' operation ('notrhs', insertion_sort.c:8) [85]  (3.2 ns)
+	'or' operation ('tmp_17', insertion_sort.c:8) [86]  (0 ns)
+	'and' operation ('tmp_19', insertion_sort.c:8) [89]  (0 ns)
+	'and' operation ('tmp_21', insertion_sort.c:12) [91]  (2.07 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

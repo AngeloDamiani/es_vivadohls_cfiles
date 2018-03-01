@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="insertion_sort.c" path="/home/elva/Documents/ProgettoEmbedded/VivadoHLS/InsertionSort/insertion_sort.c"/>
+    <originFiles name="insertion_sort.h" path="/home/elva/Documents/ProgettoEmbedded/VivadoHLS/InsertionSort/insertion_sort.h"/>
+  </source>
+  <testbench>
+    <originFiles name="insertion_sort_test.c" path="/home/elva/Documents/ProgettoEmbedded/VivadoHLS/InsertionSort/insertion_sort_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

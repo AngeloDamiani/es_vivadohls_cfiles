@@ -1,0 +1,7 @@
+awk: read error (Is a directory)
+INFO: [HLS 200-10] Running '/home/elva/Programs/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'elva' on host 'Michele-PC' (Linux_x86_64 version 4.13.0-36-generic) on Fri Mar 02 00:44:00 CET 2018
+INFO: [HLS 200-10] On os elementary OS 0.4.1 Loki
+INFO: [HLS 200-10] In directory '/home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/FloydWarshall/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_elva/100121519947840768780
+INFO: [APCC 202-1] APCC is done.

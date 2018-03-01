@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Mar  2 00:46:43 2018
+# Process ID: 14345
+# Current directory: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/FloydWarshall/solution1/sim/vhdl
+# Command line: wbtcv -mode batch -source /home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/FloydWarshall/solution1/sim/vhdl/xsim.dir/floyd_warshall/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/FloydWarshall/solution1/sim/vhdl/webtalk.log
+# Journal file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/FloydWarshall/solution1/sim/vhdl/webtalk.jou
+#-----------------------------------------------------------
+source /home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/FloydWarshall/solution1/sim/vhdl/xsim.dir/floyd_warshall/webtalk/xsim_webtalk.tcl -notrace

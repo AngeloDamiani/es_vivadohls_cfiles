@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Mar  1 11:18:25 2018
+# Process ID: 28334
+# Current directory: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/GCD/solution1/.autopilot/db/ip_tmp
+# Command line: vivado  -notrace -mode batch -source run_vivado.tcl
+# Log file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/GCD/solution1/.autopilot/db/ip_tmp/vivado.log
+# Journal file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/GCD/solution1/.autopilot/db/ip_tmp/vivado.jou
+#-----------------------------------------------------------
+source run_vivado.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/elva/Programs/Xilinx/Vivado/2017.2/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'gcd_ap_fcmp_0_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'gcd_ap_fcmp_0_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'gcd_ap_fsub_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'gcd_ap_fsub_3_full_dsp_32'...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  1 11:18:40 2018...

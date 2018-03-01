@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Mar  2 00:46:46 2018
+# Process ID: 14457
+# Current directory: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/FloydWarshall/solution1/sim/vhdl
+# Command line: xsim -mode tcl -source {xsim.dir/floyd_warshall/xsim_script.tcl}
+# Log file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/FloydWarshall/solution1/sim/vhdl/xsim.log
+# Journal file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/FloydWarshall/solution1/sim/vhdl/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/floyd_warshall/xsim_script.tcl
+# xsim {floyd_warshall} -autoloadwcfg -tclbatch {floyd_warshall.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source floyd_warshall.tcl
+## run all
+Note: simulation done!
+Time: 20215 ns  Iteration: 1  Process: /apatb_floyd_warshall_top/generate_sim_done_proc  File: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/FloydWarshall/solution1/sim/vhdl/floyd_warshall.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 20215 ns  Iteration: 1  Process: /apatb_floyd_warshall_top/generate_sim_done_proc  File: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/FloydWarshall/solution1/sim/vhdl/floyd_warshall.autotb.vhd
+$finish called at time : 20215 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Mar  2 00:47:09 2018...

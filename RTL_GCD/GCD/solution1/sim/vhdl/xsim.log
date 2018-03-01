@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Mar  1 11:18:56 2018
+# Process ID: 28927
+# Current directory: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/GCD/solution1/sim/vhdl
+# Command line: xsim -mode tcl -source {xsim.dir/gcd/xsim_script.tcl}
+# Log file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/GCD/solution1/sim/vhdl/xsim.log
+# Journal file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/GCD/solution1/sim/vhdl/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/gcd/xsim_script.tcl
+# xsim {gcd} -autoloadwcfg -tclbatch {gcd.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source gcd.tcl
+## run all
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_gcd_top/AESL_inst_gcd/gcd_fsub_32ns_32nbkb_U1/gcd_ap_fsub_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Note: simulation done!
+Time: 235 ns  Iteration: 1  Process: /apatb_gcd_top/generate_sim_done_proc  File: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/GCD/solution1/sim/vhdl/gcd.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 235 ns  Iteration: 1  Process: /apatb_gcd_top/generate_sim_done_proc  File: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/GCD/solution1/sim/vhdl/gcd.autotb.vhd
+$finish called at time : 235 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Mar  1 11:19:10 2018...

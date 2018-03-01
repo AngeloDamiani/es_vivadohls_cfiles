@@ -1,0 +1,18 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="floyd_warshall" label="INNER_LOOP" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="floyd_warshall" label="OUTER_LOOP" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="floyd_warshall" label="MIDDLE_LOOP" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

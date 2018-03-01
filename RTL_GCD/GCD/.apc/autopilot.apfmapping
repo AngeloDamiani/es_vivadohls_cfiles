@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="gcd.h" path="/home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/gcd.h"/>
+    <originFiles name="gcd.c" path="/home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/gcd.c"/>
+  </source>
+  <testbench>
+    <originFiles name="gcd_test.c" path="/home/elva/Documents/ProgettoEmbedded/VivadoHLS/GCD/gcd_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

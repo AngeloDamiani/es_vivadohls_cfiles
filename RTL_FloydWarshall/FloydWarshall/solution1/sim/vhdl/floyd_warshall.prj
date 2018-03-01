@@ -1,0 +1,5 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "floyd_warshall.vhd"
+vhdl xil_defaultlib "AESL_automem_A.vhd"
+vhdl xil_defaultlib "floyd_warshall.autotb.vhd"
+

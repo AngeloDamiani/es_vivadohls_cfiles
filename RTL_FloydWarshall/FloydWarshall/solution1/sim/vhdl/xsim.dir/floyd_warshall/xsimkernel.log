@@ -1,0 +1,7 @@
+Running: xsim.dir/floyd_warshall/xsimk -simmode gui -wdb floyd_warshall.wdb -simrunnum 0 -socket 34803
+Design successfully loaded
+Design Loading Memory Usage: 34868 KB (Peak: 34868 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 116800 KB (Peak: 174136 KB)
+Simulation CPU Usage: 10 ms

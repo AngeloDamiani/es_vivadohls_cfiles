@@ -1,0 +1,8 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "ip/xil_defaultlib/gcd_ap_fcmp_0_no_dsp_32.vhd"
+vhdl xil_defaultlib "ip/xil_defaultlib/gcd_ap_fsub_3_full_dsp_32.vhd"
+vhdl xil_defaultlib "gcd.vhd"
+vhdl xil_defaultlib "gcd.autotb.vhd"
+vhdl xil_defaultlib "gcd_fsub_32ns_32nbkb.vhd"
+vhdl xil_defaultlib "gcd_fcmp_32ns_32ncud.vhd"
+

@@ -1,0 +1,3 @@
+lappend pragmaStatus0 {pragma "PIPELINE" source "/home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/floyd_warshall.c" location "floyd_warshall/INNER_LOOP" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "INLINE" source "/home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/floyd_warshall.c" location "floyd_warshall/OUTER_LOOP" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus2 {pragma "INLINE" source "/home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/floyd_warshall.c" location "floyd_warshall/MIDDLE_LOOP" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}

@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Mar  1 10:47:26 2018
+# Process ID: 15659
+# Current directory: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/InsertionSort/InsertionSort/solution1/sim/vhdl
+# Command line: xsim -mode tcl -source {xsim.dir/insertion_sort/xsim_script.tcl}
+# Log file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/InsertionSort/InsertionSort/solution1/sim/vhdl/xsim.log
+# Journal file: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/InsertionSort/InsertionSort/solution1/sim/vhdl/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/insertion_sort/xsim_script.tcl
+# xsim {insertion_sort} -autoloadwcfg -tclbatch {insertion_sort.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source insertion_sort.tcl
+## run all
+Note: simulation done!
+Time: 1115 ns  Iteration: 1  Process: /apatb_insertion_sort_top/generate_sim_done_proc  File: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/InsertionSort/InsertionSort/solution1/sim/vhdl/insertion_sort.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 1115 ns  Iteration: 1  Process: /apatb_insertion_sort_top/generate_sim_done_proc  File: /home/elva/Documents/ProgettoEmbedded/VivadoHLS/InsertionSort/InsertionSort/solution1/sim/vhdl/insertion_sort.autotb.vhd
+$finish called at time : 1115 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Mar  1 10:47:39 2018...

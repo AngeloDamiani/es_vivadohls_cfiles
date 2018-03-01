@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="floyd_warshall.c" path="/home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/floyd_warshall.c"/>
+    <originFiles name="floyd_warshall.h" path="/home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/floyd_warshall.h"/>
+  </source>
+  <testbench>
+    <originFiles name="floyd_warshall_test.c" path="/home/elva/Documents/ProgettoEmbedded/VivadoHLS/FloydWarshall/floyd_warshall_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
