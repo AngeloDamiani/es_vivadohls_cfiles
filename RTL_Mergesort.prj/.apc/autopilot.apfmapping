@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mergesort.c" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_mergesort.prj/solution1/mergesort.c"/>
+    <originFiles name="mergesort.h" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_mergesort.prj/solution1/mergesort.h"/>
+  </source>
+  <testbench>
+    <originFiles name="mergesort_test.c" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_mergesort.prj/solution1/mergesort_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

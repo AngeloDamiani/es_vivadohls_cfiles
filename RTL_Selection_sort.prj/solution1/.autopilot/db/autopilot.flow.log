@@ -1,0 +1,343 @@
+INFO: [HLS 200-0] Workspace /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1 opened at Tue Feb 27 17:04:02 CET 2018
+INFO: [HLS 200-100] Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-100] Command     config_clock returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
+INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     import_lib /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq 
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.lib 
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.lib 
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_old.lib 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_vivado.lib 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       config_chip_info -quiet -speed medium 
+INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     import_lib returned 0; 0.02 sec.
+INFO: [HLS 200-100] Execute     source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute             source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.07 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
+INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     import_lib /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6 
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_hp.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute             source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute             source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command     import_lib returned 0; 0.02 sec.
+INFO: [HLS 200-100] Execute     source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     set_part xc7z020clg484-1 
+INFO: [HLS 200-100] Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         license_isbetapart xc7z020 
+INFO: [HLS 200-100] Command         license_isbetapart returned 1; 0.01 sec.
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         config_chip_info -quiet -speed slow 
+INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Command       add_library returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute       add_library xilinx/zynq/zynq_fpv6 
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command       add_library returned 0; 0 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command     set_part returned 0; 0.04 sec.
+INFO: [HLS 200-100] Execute     get_default_platform 
+INFO: [HLS 200-100] Command     get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command     config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     config_chip_info -quiet -speed slow 
+INFO: [HLS 200-100] Command     config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Command   open_solution returned 0; 0.19 sec.
+INFO: [HLS 200-100] Execute   cosim_design -rtl vhdl 
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute             source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.06 sec.
+INFO: [HLS 200-100] Execute           source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.09 sec.
+INFO: [HLS 200-100] Execute         source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.09 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.09 sec.
+INFO: [HLS 200-100] Execute     source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     is_encrypted /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.tcls/selection_sort_test.c 
+INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     is_encrypted /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/selection_sort.h 
+INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     is_encrypted /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/selection_sort.c 
+INFO: [HLS 200-100] Command     is_encrypted returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [HLS 200-0] Marker-Pragma convertor: /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/./sim/autowrap/testbench/selection_sort_test.c_pre.c /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/./sim/autowrap/testbench/selection_sort_test.c_pre.c.line.c ./sim/autowrap/testbench/line.tmp 1
+INFO: [HLS 200-0] Converting Markers to Pragmas...
+INFO: [HLS 200-0] Marker-Pragma convertor: ./sim/autowrap/testbench/selection_sort_test.c_pre.c.tb.c.line ./sim/autowrap/testbench/selection_sort_test.c_pre.c.tb.c ./sim/autowrap/testbench/line.tmp 0
+INFO: [HLS 200-0] Converting Pragmas to Markers...
+INFO: [HLS 200-0] Marker-Pragma convertor: /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/./sim/autowrap/testbench/selection_sort.c_pre.c /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/./sim/autowrap/testbench/selection_sort.c_pre.c.line.c ./sim/autowrap/testbench/line.tmp 1
+INFO: [HLS 200-0] Converting Markers to Pragmas...
+INFO: [HLS 200-0] Marker-Pragma convertor: ./sim/autowrap/testbench/selection_sort.c_pre.c.tb.c.line ./sim/autowrap/testbench/selection_sort.c_pre.c.tb.c ./sim/autowrap/testbench/line.tmp 0
+INFO: [HLS 200-0] Converting Pragmas to Markers...
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/./sim/autowrap/testbench/tb.status.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.02 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source ../tv/cdatafile/ref.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source ../tv/cdatafile/ref.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.autopilot/db/selection_sort.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source .run_sim.tcl 
+INFO: [HLS 200-100] Execute       source check_sim.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source .sim.status.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [COSIM 212-322] Starting VHDL simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [HLS 200-100] Command     ap_source returned 0; 15.3 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-100] Command   cosim_design returned 0; 30.47 sec.
+INFO: [HLS 200-100] Command ap_source returned 0; 30.66 sec.
+INFO: [HLS 200-100] Execute cleanup_all 
+INFO: [HLS 200-100] Command cleanup_all returned 0; 0 sec.

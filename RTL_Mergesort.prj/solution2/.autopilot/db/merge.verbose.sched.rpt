@@ -1,0 +1,565 @@
+
+
+================================================================
+== Vivado HLS Report for 'merge'
+================================================================
+* Date:           Thu Mar  1 10:51:46 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        RTL_mergesort.prj
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.36|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    8|   41|    8|   41|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+-----+-----+----------+-----------+-----------+--------+----------+
+        |               |  Latency  | Iteration|  Initiation Interval  |  Trip  |          |
+        |   Loop Name   | min | max |  Latency |  achieved |   target  |  Count | Pipelined|
+        +---------------+-----+-----+----------+-----------+-----------+--------+----------+
+        |- MERGE_WHILE  |    1|    9|         1|          -|          -|  1 ~ 9 |    no    |
+        |- MERGE_FOR1   |    0|    9|         1|          -|          -|  0 ~ 9 |    no    |
+        |- MERGE_FOR2   |    0|    5|         1|          -|          -|  0 ~ 5 |    no    |
+        |- MERGE_FOR3   |    4|   20|         2|          -|          -| 2 ~ 10 |    no    |
+        +---------------+-----+-----+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 5
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / (tmp_s)
+	3  / (!tmp_s)
+3 --> 
+	3  / (!tmp_2 & !tmp_10) | (tmp_2 & !tmp_7)
+	4  / (!tmp_2 & tmp_10) | (tmp_2 & tmp_7)
+4 --> 
+	5  / (!tmp_16)
+5 --> 
+	4  / true
+* FSM state operations: 
+
+ <State 1>: 5.38ns
+ST_1: p_0 (25)  [1/1] 0.00ns
+:0  %p_0 = alloca i64
+
+ST_1: i2_1 (26)  [1/1] 0.00ns
+:1  %i2_1 = alloca i64
+
+ST_1: arr_9_read_1 (27)  [1/1] 0.00ns
+:2  %arr_9_read_1 = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %arr_9_read)
+
+ST_1: arr_8_read_1 (28)  [1/1] 0.00ns
+:3  %arr_8_read_1 = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %arr_8_read)
+
+ST_1: arr_7_read_1 (29)  [1/1] 0.00ns
+:4  %arr_7_read_1 = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %arr_7_read)
+
+ST_1: arr_6_read_1 (30)  [1/1] 0.00ns
+:5  %arr_6_read_1 = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %arr_6_read)
+
+ST_1: arr_5_read_1 (31)  [1/1] 0.00ns
+:6  %arr_5_read_1 = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %arr_5_read)
+
+ST_1: arr_4_read_1 (32)  [1/1] 0.00ns
+:7  %arr_4_read_1 = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %arr_4_read)
+
+ST_1: arr_3_read_1 (33)  [1/1] 0.00ns
+:8  %arr_3_read_1 = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %arr_3_read)
+
+ST_1: arr_2_read_1 (34)  [1/1] 0.00ns
+:9  %arr_2_read_1 = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %arr_2_read)
+
+ST_1: arr_1_read_1 (35)  [1/1] 0.00ns
+:10  %arr_1_read_1 = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %arr_1_read)
+
+ST_1: arr_0_read_1 (36)  [1/1] 0.00ns
+:11  %arr_0_read_1 = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %arr_0_read)
+
+ST_1: f2_read (37)  [1/1] 0.00ns
+:12  %f2_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %f2)
+
+ST_1: f1_read (38)  [1/1] 0.00ns
+:13  %f1_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %f1)
+
+ST_1: i1_read (39)  [1/1] 0.00ns
+:14  %i1_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %i1)
+
+ST_1: x (40)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:8
+:15  %x = alloca [10 x i64], align 16
+
+ST_1: i2 (41)  [1/1] 3.79ns  loc: RTL_mergesort.prj/solution1/mergesort.c:9
+:16  %i2 = add nsw i64 %f1_read, 1
+
+ST_1: StgValue_23 (42)  [1/1] 1.59ns  loc: RTL_mergesort.prj/solution1/mergesort.c:9
+:17  store i64 %i2, i64* %i2_1
+
+ST_1: StgValue_24 (43)  [1/1] 1.59ns  loc: RTL_mergesort.prj/solution1/mergesort.c:6
+:18  store i64 %i1_read, i64* %p_0
+
+ST_1: StgValue_25 (44)  [1/1] 1.59ns  loc: RTL_mergesort.prj/solution1/mergesort.c:13
+:19  br label %1
+
+
+ <State 2>: 6.36ns
+ST_2: i (46)  [1/1] 0.00ns
+:0  %i = phi i4 [ 0, %0 ], [ %i_1, %5 ]
+
+ST_2: p_0_load (47)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:16
+:1  %p_0_load = load i64* %p_0
+
+ST_2: i2_1_load (48)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:18
+:2  %i2_1_load = load i64* %i2_1
+
+ST_2: i_cast (49)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:13
+:3  %i_cast = zext i4 %i to i64
+
+ST_2: slt (50)  [1/1] 3.73ns  loc: RTL_mergesort.prj/solution1/mergesort.c:13
+:4  %slt = icmp slt i64 %f2_read, %i2_1_load
+
+ST_2: rev (51)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:13 (grouped into LUT with out node tmp_s)
+:5  %rev = xor i1 %slt, true
+
+ST_2: slt1 (52)  [1/1] 3.73ns  loc: RTL_mergesort.prj/solution1/mergesort.c:13
+:6  %slt1 = icmp slt i64 %f1_read, %p_0_load
+
+ST_2: rev1 (53)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:13 (grouped into LUT with out node tmp_s)
+:7  %rev1 = xor i1 %slt1, true
+
+ST_2: tmp_s (54)  [1/1] 2.07ns  loc: RTL_mergesort.prj/solution1/mergesort.c:13 (out node of the LUT)
+:8  %tmp_s = and i1 %rev, %rev1
+
+ST_2: i_1 (55)  [1/1] 2.35ns  loc: RTL_mergesort.prj/solution1/mergesort.c:16
+:9  %i_1 = add i4 %i, 1
+
+ST_2: StgValue_36 (56)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:13
+:10  br i1 %tmp_s, label %2, label %6
+
+ST_2: StgValue_37 (58)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:14
+:0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str) nounwind
+
+ST_2: tmp_3 (59)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:14
+:1  %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str)
+
+ST_2: StgValue_39 (60)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:15
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 1, i32 9, i32 5, [1 x i8]* @p_str1) nounwind
+
+ST_2: tmp (61)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:16
+:3  %tmp = trunc i64 %p_0_load to i4
+
+ST_2: tmp_4 (62)  [1/1] 2.63ns  loc: RTL_mergesort.prj/solution1/mergesort.c:16
+:4  %tmp_4 = call i64 @_ssdm_op_Mux.ap_auto.10i64.i4(i64 %arr_0_read_1, i64 %arr_1_read_1, i64 %arr_2_read_1, i64 %arr_3_read_1, i64 %arr_4_read_1, i64 %arr_5_read_1, i64 %arr_6_read_1, i64 %arr_7_read_1, i64 %arr_8_read_1, i64 %arr_9_read_1, i4 %tmp)
+
+ST_2: tmp_13 (63)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:18
+:5  %tmp_13 = trunc i64 %i2_1_load to i4
+
+ST_2: tmp_18 (64)  [1/1] 2.63ns  loc: RTL_mergesort.prj/solution1/mergesort.c:18
+:6  %tmp_18 = call i64 @_ssdm_op_Mux.ap_auto.10i64.i4(i64 %arr_0_read_1, i64 %arr_1_read_1, i64 %arr_2_read_1, i64 %arr_3_read_1, i64 %arr_4_read_1, i64 %arr_5_read_1, i64 %arr_6_read_1, i64 %arr_7_read_1, i64 %arr_8_read_1, i64 %arr_9_read_1, i4 %tmp_13)
+
+ST_2: tmp_1 (65)  [1/1] 3.73ns  loc: RTL_mergesort.prj/solution1/mergesort.c:15
+:7  %tmp_1 = icmp sgt i64 %tmp_4, %tmp_18
+
+ST_2: StgValue_45 (66)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:15
+:8  br i1 %tmp_1, label %4, label %3
+
+ST_2: i1_assign (68)  [1/1] 3.79ns  loc: RTL_mergesort.prj/solution1/mergesort.c:16
+:0  %i1_assign = add nsw i64 %p_0_load, 1
+
+ST_2: x_addr_1 (69)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:16
+:1  %x_addr_1 = getelementptr inbounds [10 x i64]* %x, i64 0, i64 %i_cast
+
+ST_2: StgValue_48 (70)  [1/1] 2.32ns  loc: RTL_mergesort.prj/solution1/mergesort.c:16
+:2  store i64 %tmp_4, i64* %x_addr_1, align 8
+
+ST_2: StgValue_49 (71)  [1/1] 1.59ns  loc: RTL_mergesort.prj/solution1/mergesort.c:16
+:3  store i64 %i1_assign, i64* %p_0
+
+ST_2: StgValue_50 (72)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:16
+:4  br label %5
+
+ST_2: i2_2 (74)  [1/1] 3.79ns  loc: RTL_mergesort.prj/solution1/mergesort.c:18
+:0  %i2_2 = add nsw i64 %i2_1_load, 1
+
+ST_2: x_addr (75)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:18
+:1  %x_addr = getelementptr inbounds [10 x i64]* %x, i64 0, i64 %i_cast
+
+ST_2: StgValue_53 (76)  [1/1] 2.32ns  loc: RTL_mergesort.prj/solution1/mergesort.c:18
+:2  store i64 %tmp_18, i64* %x_addr, align 8
+
+ST_2: StgValue_54 (77)  [1/1] 1.59ns  loc: RTL_mergesort.prj/solution1/mergesort.c:18
+:3  store i64 %i2_2, i64* %i2_1
+
+ST_2: StgValue_55 (78)  [1/1] 0.00ns
+:4  br label %5
+
+ST_2: empty (80)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:19
+:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str, i32 %tmp_3)
+
+ST_2: StgValue_57 (81)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:19
+:1  br label %1
+
+ST_2: tmp_2 (83)  [1/1] 3.73ns  loc: RTL_mergesort.prj/solution1/mergesort.c:21
+:0  %tmp_2 = icmp sgt i64 %p_0_load, %f1_read
+
+ST_2: StgValue_59 (84)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:21
+:1  br i1 %tmp_2, label %10, label %7
+
+ST_2: tmp_20 (86)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:24
+:0  %tmp_20 = trunc i64 %p_0_load to i8
+
+ST_2: StgValue_61 (87)  [1/1] 1.59ns  loc: RTL_mergesort.prj/solution1/mergesort.c:24
+:1  br label %8
+
+ST_2: tmp_19 (109)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:29
+:0  %tmp_19 = trunc i64 %i2_1_load to i8
+
+ST_2: StgValue_63 (110)  [1/1] 1.59ns  loc: RTL_mergesort.prj/solution1/mergesort.c:29
+:1  br label %11
+
+
+ <State 3>: 4.95ns
+ST_3: tmp_8 (89)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:24
+:0  %tmp_8 = phi i8 [ %tmp_20, %7 ], [ %tmp_12, %9 ]
+
+ST_3: i_2 (90)  [1/1] 0.00ns
+:1  %i_2 = phi i64 [ %i_cast, %7 ], [ %i_6, %9 ]
+
+ST_3: tmp_9 (91)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:24
+:2  %tmp_9 = sext i8 %tmp_8 to i64
+
+ST_3: tmp_10 (92)  [1/1] 3.73ns  loc: RTL_mergesort.prj/solution1/mergesort.c:24
+:3  %tmp_10 = icmp sgt i64 %tmp_9, %f1_read
+
+ST_3: StgValue_68 (93)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:24
+:4  br i1 %tmp_10, label %.loopexit.loopexit46, label %9
+
+ST_3: StgValue_69 (95)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:25
+:0  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str2) nounwind
+
+ST_3: tmp_23 (96)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:25
+:1  %tmp_23 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str2)
+
+ST_3: StgValue_71 (97)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:26
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 9, i32 4, [1 x i8]* @p_str1) nounwind
+
+ST_3: tmp_27 (98)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:24
+:3  %tmp_27 = trunc i8 %tmp_8 to i4
+
+ST_3: tmp_24 (99)  [1/1] 2.63ns  loc: RTL_mergesort.prj/solution1/mergesort.c:24
+:4  %tmp_24 = call i64 @_ssdm_op_Mux.ap_auto.10i64.i4(i64 %arr_0_read_1, i64 %arr_1_read_1, i64 %arr_2_read_1, i64 %arr_3_read_1, i64 %arr_4_read_1, i64 %arr_5_read_1, i64 %arr_6_read_1, i64 %arr_7_read_1, i64 %arr_8_read_1, i64 %arr_9_read_1, i4 %tmp_27)
+
+ST_3: i_6 (100)  [1/1] 3.79ns  loc: RTL_mergesort.prj/solution1/mergesort.c:25
+:5  %i_6 = add nsw i64 1, %i_2
+
+ST_3: x_addr_3 (101)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:25
+:6  %x_addr_3 = getelementptr inbounds [10 x i64]* %x, i64 0, i64 %i_2
+
+ST_3: StgValue_76 (102)  [1/1] 2.32ns  loc: RTL_mergesort.prj/solution1/mergesort.c:25
+:7  store i64 %tmp_24, i64* %x_addr_3, align 8
+
+ST_3: empty_4 (103)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:25
+:8  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str2, i32 %tmp_23)
+
+ST_3: tmp_12 (104)  [1/1] 2.32ns  loc: RTL_mergesort.prj/solution1/mergesort.c:24
+:9  %tmp_12 = add i8 1, %tmp_8
+
+ST_3: StgValue_79 (105)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:24
+:10  br label %8
+
+ST_3: StgValue_80 (107)  [1/1] 0.00ns
+.loopexit.loopexit46:0  br label %.loopexit
+
+ST_3: tmp_5 (112)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:29
+:0  %tmp_5 = phi i8 [ %tmp_19, %10 ], [ %tmp_11, %12 ]
+
+ST_3: i_3 (113)  [1/1] 0.00ns
+:1  %i_3 = phi i64 [ %i_cast, %10 ], [ %i_5, %12 ]
+
+ST_3: tmp_6 (114)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:29
+:2  %tmp_6 = sext i8 %tmp_5 to i64
+
+ST_3: tmp_7 (115)  [1/1] 3.73ns  loc: RTL_mergesort.prj/solution1/mergesort.c:29
+:3  %tmp_7 = icmp sgt i64 %tmp_6, %f2_read
+
+ST_3: StgValue_85 (116)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:29
+:4  br i1 %tmp_7, label %.loopexit.loopexit, label %12
+
+ST_3: StgValue_86 (118)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:30
+:0  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str3) nounwind
+
+ST_3: tmp_21 (119)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:30
+:1  %tmp_21 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str3)
+
+ST_3: StgValue_88 (120)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:31
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 5, i32 2, [1 x i8]* @p_str1) nounwind
+
+ST_3: tmp_26 (121)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:29
+:3  %tmp_26 = trunc i8 %tmp_5 to i4
+
+ST_3: tmp_22 (122)  [1/1] 2.63ns  loc: RTL_mergesort.prj/solution1/mergesort.c:29
+:4  %tmp_22 = call i64 @_ssdm_op_Mux.ap_auto.10i64.i4(i64 %arr_0_read_1, i64 %arr_1_read_1, i64 %arr_2_read_1, i64 %arr_3_read_1, i64 %arr_4_read_1, i64 %arr_5_read_1, i64 %arr_6_read_1, i64 %arr_7_read_1, i64 %arr_8_read_1, i64 %arr_9_read_1, i4 %tmp_26)
+
+ST_3: i_5 (123)  [1/1] 3.79ns  loc: RTL_mergesort.prj/solution1/mergesort.c:30
+:5  %i_5 = add nsw i64 1, %i_3
+
+ST_3: x_addr_2 (124)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:30
+:6  %x_addr_2 = getelementptr inbounds [10 x i64]* %x, i64 0, i64 %i_3
+
+ST_3: StgValue_93 (125)  [1/1] 2.32ns  loc: RTL_mergesort.prj/solution1/mergesort.c:30
+:7  store i64 %tmp_22, i64* %x_addr_2, align 8
+
+ST_3: empty_5 (126)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:30
+:8  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str3, i32 %tmp_21)
+
+ST_3: tmp_11 (127)  [1/1] 2.32ns  loc: RTL_mergesort.prj/solution1/mergesort.c:29
+:9  %tmp_11 = add i8 1, %tmp_5
+
+ST_3: StgValue_96 (128)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:29
+:10  br label %11
+
+ST_3: StgValue_97 (130)  [1/1] 0.00ns
+.loopexit.loopexit:0  br label %.loopexit
+
+ST_3: tmp_28 (132)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:34
+.loopexit:0  %tmp_28 = trunc i64 %i1_read to i8
+
+ST_3: StgValue_99 (133)  [1/1] 1.59ns  loc: RTL_mergesort.prj/solution1/mergesort.c:34
+.loopexit:1  br label %13
+
+
+ <State 4>: 3.79ns
+ST_4: tmp_14 (135)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:34
+:0  %tmp_14 = phi i8 [ %tmp_28, %.loopexit ], [ %tmp_17, %15 ]
+
+ST_4: i_4 (136)  [1/1] 0.00ns
+:1  %i_4 = phi i64 [ 0, %.loopexit ], [ %i_7, %15 ]
+
+ST_4: tmp_15 (137)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:34
+:2  %tmp_15 = sext i8 %tmp_14 to i64
+
+ST_4: tmp_16 (138)  [1/1] 3.73ns  loc: RTL_mergesort.prj/solution1/mergesort.c:34
+:3  %tmp_16 = icmp sgt i64 %tmp_15, %f2_read
+
+ST_4: i_7 (139)  [1/1] 3.79ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+:4  %i_7 = add nsw i64 %i_4, 1
+
+ST_4: StgValue_105 (140)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:34
+:5  br i1 %tmp_16, label %16, label %14
+
+ST_4: x_addr_4 (145)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+:3  %x_addr_4 = getelementptr inbounds [10 x i64]* %x, i64 0, i64 %i_4
+
+ST_4: x_load (146)  [2/2] 2.32ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+:4  %x_load = load i64* %x_addr_4, align 8
+
+ST_4: StgValue_108 (184)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:34
+:0  store i8 %tmp_14, i8* @h, align 1
+
+ST_4: StgValue_109 (185)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:36
+:1  ret void
+
+
+ <State 5>: 3.31ns
+ST_5: StgValue_110 (142)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+:0  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str4) nounwind
+
+ST_5: tmp_25 (143)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+:1  %tmp_25 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str4)
+
+ST_5: StgValue_112 (144)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:36
+:2  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 2, i32 10, i32 5, [1 x i8]* @p_str1) nounwind
+
+ST_5: x_load (146)  [1/2] 2.32ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+:4  %x_load = load i64* %x_addr_4, align 8
+
+ST_5: tmp_29 (147)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:34
+:5  %tmp_29 = trunc i8 %tmp_14 to i4
+
+ST_5: StgValue_115 (148)  [1/1] 3.31ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+:6  switch i4 %tmp_29, label %branch9 [
+    i4 0, label %branch0
+    i4 1, label %branch1
+    i4 2, label %branch2
+    i4 3, label %branch3
+    i4 4, label %branch4
+    i4 5, label %branch5
+    i4 6, label %branch6
+    i4 7, label %branch7
+    i4 -8, label %branch8
+  ]
+
+ST_5: StgValue_116 (150)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch8:0  call void @_ssdm_op_Write.ap_auto.i64P(i64* %arr_8, i64 %x_load)
+
+ST_5: StgValue_117 (151)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch8:1  br label %15
+
+ST_5: StgValue_118 (153)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch7:0  call void @_ssdm_op_Write.ap_auto.i64P(i64* %arr_7, i64 %x_load)
+
+ST_5: StgValue_119 (154)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch7:1  br label %15
+
+ST_5: StgValue_120 (156)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch6:0  call void @_ssdm_op_Write.ap_auto.i64P(i64* %arr_6, i64 %x_load)
+
+ST_5: StgValue_121 (157)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch6:1  br label %15
+
+ST_5: StgValue_122 (159)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch5:0  call void @_ssdm_op_Write.ap_auto.i64P(i64* %arr_5, i64 %x_load)
+
+ST_5: StgValue_123 (160)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch5:1  br label %15
+
+ST_5: StgValue_124 (162)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch4:0  call void @_ssdm_op_Write.ap_auto.i64P(i64* %arr_4, i64 %x_load)
+
+ST_5: StgValue_125 (163)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch4:1  br label %15
+
+ST_5: StgValue_126 (165)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch3:0  call void @_ssdm_op_Write.ap_auto.i64P(i64* %arr_3, i64 %x_load)
+
+ST_5: StgValue_127 (166)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch3:1  br label %15
+
+ST_5: StgValue_128 (168)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch2:0  call void @_ssdm_op_Write.ap_auto.i64P(i64* %arr_2, i64 %x_load)
+
+ST_5: StgValue_129 (169)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch2:1  br label %15
+
+ST_5: StgValue_130 (171)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch1:0  call void @_ssdm_op_Write.ap_auto.i64P(i64* %arr_1, i64 %x_load)
+
+ST_5: StgValue_131 (172)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch1:1  br label %15
+
+ST_5: StgValue_132 (174)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch0:0  call void @_ssdm_op_Write.ap_auto.i64P(i64* %arr_0, i64 %x_load)
+
+ST_5: StgValue_133 (175)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch0:1  br label %15
+
+ST_5: StgValue_134 (177)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch9:0  call void @_ssdm_op_Write.ap_auto.i64P(i64* %arr_9, i64 %x_load)
+
+ST_5: StgValue_135 (178)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+branch9:1  br label %15
+
+ST_5: empty_6 (180)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:35
+:0  %empty_6 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str4, i32 %tmp_25)
+
+ST_5: tmp_17 (181)  [1/1] 2.32ns  loc: RTL_mergesort.prj/solution1/mergesort.c:34
+:1  %tmp_17 = add i8 %tmp_14, 1
+
+ST_5: StgValue_138 (182)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:34
+:2  br label %13
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 5.38ns
+The critical path consists of the following:
+	wire read on port 'f1' [38]  (0 ns)
+	'add' operation ('i2', RTL_mergesort.prj/solution1/mergesort.c:9) [41]  (3.79 ns)
+	'store' operation (RTL_mergesort.prj/solution1/mergesort.c:9) of variable 'i2', RTL_mergesort.prj/solution1/mergesort.c:9 on local variable 'i2' [42]  (1.59 ns)
+
+ <State 2>: 6.36ns
+The critical path consists of the following:
+	'load' operation ('p_0_load', RTL_mergesort.prj/solution1/mergesort.c:16) on local variable 'i1' [47]  (0 ns)
+	'mux' operation ('tmp_4', RTL_mergesort.prj/solution1/mergesort.c:16) [62]  (2.63 ns)
+	'icmp' operation ('tmp_1', RTL_mergesort.prj/solution1/mergesort.c:15) [65]  (3.73 ns)
+
+ <State 3>: 4.95ns
+The critical path consists of the following:
+	'phi' operation ('tmp_8', RTL_mergesort.prj/solution1/mergesort.c:24) with incoming values : ('tmp_20', RTL_mergesort.prj/solution1/mergesort.c:24) ('tmp_12', RTL_mergesort.prj/solution1/mergesort.c:24) [89]  (0 ns)
+	'mux' operation ('tmp_24', RTL_mergesort.prj/solution1/mergesort.c:24) [99]  (2.63 ns)
+	'store' operation (RTL_mergesort.prj/solution1/mergesort.c:25) of variable 'tmp_24', RTL_mergesort.prj/solution1/mergesort.c:24 on array 'x', RTL_mergesort.prj/solution1/mergesort.c:8 [102]  (2.32 ns)
+
+ <State 4>: 3.79ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', RTL_mergesort.prj/solution1/mergesort.c:35) [136]  (0 ns)
+	'add' operation ('i', RTL_mergesort.prj/solution1/mergesort.c:35) [139]  (3.79 ns)
+
+ <State 5>: 3.31ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

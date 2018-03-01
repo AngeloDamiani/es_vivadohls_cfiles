@@ -1,0 +1,310 @@
+
+
+================================================================
+== Vivado HLS Report for 'mergesort'
+================================================================
+* Date:           Thu Mar  1 10:51:46 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        RTL_mergesort.prj
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.59|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   57|  909|   58|  910|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+-------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  |  Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count | Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+-------+----------+
+        |- FOR1    |   56|  908| 14 ~ 227 |          -|          -|      4|    no    |
+        | + FOR2   |   12|  225|  12 ~ 45 |          -|          -| 1 ~ 5 |    no    |
+        +----------+-----+-----+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (tmp)
+3 --> 
+	4  / (tmp_3)
+	2  / (!tmp_3)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	3  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_7 (12)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i64* %arr_9), !map !26
+
+ST_1: StgValue_8 (13)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i64* %arr_8), !map !32
+
+ST_1: StgValue_9 (14)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i64* %arr_7), !map !38
+
+ST_1: StgValue_10 (15)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i64* %arr_6), !map !44
+
+ST_1: StgValue_11 (16)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i64* %arr_5), !map !50
+
+ST_1: StgValue_12 (17)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i64* %arr_4), !map !56
+
+ST_1: StgValue_13 (18)  [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i64* %arr_3), !map !62
+
+ST_1: StgValue_14 (19)  [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i64* %arr_2), !map !68
+
+ST_1: StgValue_15 (20)  [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i64* %arr_1), !map !74
+
+ST_1: StgValue_16 (21)  [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i64* %arr_0), !map !80
+
+ST_1: StgValue_17 (22)  [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @mergesort_str) nounwind
+
+ST_1: StgValue_18 (23)  [1/1] 1.59ns  loc: RTL_mergesort.prj/solution1/mergesort.c:49
+:11  br label %1
+
+
+ <State 2>: 5.80ns
+ST_2: m (25)  [1/1] 0.00ns
+:0  %m = phi i64 [ 1, %0 ], [ %m_1, %5 ]
+
+ST_2: tmp (26)  [1/1] 3.73ns  loc: RTL_mergesort.prj/solution1/mergesort.c:49
+:1  %tmp = icmp slt i64 %m, 10
+
+ST_2: StgValue_21 (27)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:49
+:2  br i1 %tmp, label %2, label %6
+
+ST_2: StgValue_22 (29)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+
+ST_2: StgValue_23 (30)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:50
+:1  call void (...)* @_ssdm_op_SpecLoopName([5 x i8]* @p_str6) nounwind
+
+ST_2: tmp_1 (31)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:50
+:2  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([5 x i8]* @p_str6) nounwind
+
+ST_2: m_1 (32)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:3  %m_1 = shl i64 %m, 1
+
+ST_2: StgValue_26 (33)  [1/1] 1.59ns  loc: RTL_mergesort.prj/solution1/mergesort.c:52
+:4  br label %3
+
+ST_2: StgValue_27 (66)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:57
+:0  ret void
+
+
+ <State 3>: 7.59ns
+ST_3: x (35)  [1/1] 0.00ns
+:0  %x = phi i64 [ 0, %2 ], [ %x_1, %4 ]
+
+ST_3: tmp_3 (36)  [1/1] 3.73ns  loc: RTL_mergesort.prj/solution1/mergesort.c:52
+:1  %tmp_3 = icmp slt i64 %x, 9
+
+ST_3: StgValue_30 (37)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:52
+:2  br i1 %tmp_3, label %4, label %5
+
+ST_3: tmp1 (43)  [1/1] 3.79ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:4  %tmp1 = add i64 %x, -1
+
+ST_3: tmp_5 (44)  [1/1] 3.79ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:5  %tmp_5 = add i64 %tmp1, %m
+
+ST_3: c_assign (45)  [1/1] 3.79ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:6  %c_assign = add i64 %tmp1, %m_1
+
+ST_3: x_1 (60)  [1/1] 3.79ns  loc: RTL_mergesort.prj/solution1/mergesort.c:52
+:21  %x_1 = add nsw i64 %m_1, %x
+
+ST_3: empty_3 (63)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:56
+:0  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([5 x i8]* @p_str6, i32 %tmp_1) nounwind
+
+ST_3: StgValue_36 (64)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:49
+:1  br label %1
+
+
+ <State 4>: 5.80ns
+ST_4: tmp_i (46)  [1/1] 3.73ns  loc: RTL_mergesort.prj/solution1/mergesort.c:41->RTL_mergesort.prj/solution1/mergesort.c:54
+:7  %tmp_i = icmp slt i64 %c_assign, 9
+
+ST_4: c_assign_1 (47)  [1/1] 2.07ns  loc: RTL_mergesort.prj/solution1/mergesort.c:41->RTL_mergesort.prj/solution1/mergesort.c:54
+:8  %c_assign_1 = select i1 %tmp_i, i64 %c_assign, i64 9
+
+ST_4: arr_0_read (48)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:9  %arr_0_read = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %arr_0)
+
+ST_4: arr_1_read (49)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:10  %arr_1_read = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %arr_1)
+
+ST_4: arr_2_read (50)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:11  %arr_2_read = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %arr_2)
+
+ST_4: arr_3_read (51)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:12  %arr_3_read = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %arr_3)
+
+ST_4: arr_4_read (52)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:13  %arr_4_read = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %arr_4)
+
+ST_4: arr_5_read (53)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:14  %arr_5_read = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %arr_5)
+
+ST_4: arr_6_read (54)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:15  %arr_6_read = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %arr_6)
+
+ST_4: arr_7_read (55)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:16  %arr_7_read = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %arr_7)
+
+ST_4: arr_8_read (56)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:17  %arr_8_read = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %arr_8)
+
+ST_4: arr_9_read (57)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:18  %arr_9_read = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %arr_9)
+
+
+ <State 5>: 5.38ns
+ST_5: StgValue_49 (58)  [2/2] 5.38ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:19  call fastcc void @merge(i64 %x, i64 %tmp_5, i64 %c_assign_1, i64* %arr_0, i64 %arr_0_read, i64* %arr_1, i64 %arr_1_read, i64* %arr_2, i64 %arr_2_read, i64* %arr_3, i64 %arr_3_read, i64* %arr_4, i64 %arr_4_read, i64* %arr_5, i64 %arr_5_read, i64* %arr_6, i64 %arr_6_read, i64* %arr_7, i64 %arr_7_read, i64* %arr_8, i64 %arr_8_read, i64* %arr_9, i64 %arr_9_read)
+
+
+ <State 6>: 2.32ns
+ST_6: StgValue_50 (39)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:53
+:0  call void (...)* @_ssdm_op_SpecLoopName([5 x i8]* @p_str7) nounwind
+
+ST_6: tmp_2 (40)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:53
+:1  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([5 x i8]* @p_str7) nounwind
+
+ST_6: StgValue_52 (41)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:2  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_6: StgValue_53 (42)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 1, i32 5, i32 3, [1 x i8]* @p_str1) nounwind
+
+ST_6: StgValue_54 (58)  [1/2] 2.32ns  loc: RTL_mergesort.prj/solution1/mergesort.c:54
+:19  call fastcc void @merge(i64 %x, i64 %tmp_5, i64 %c_assign_1, i64* %arr_0, i64 %arr_0_read, i64* %arr_1, i64 %arr_1_read, i64* %arr_2, i64 %arr_2_read, i64* %arr_3, i64 %arr_3_read, i64* %arr_4, i64 %arr_4_read, i64* %arr_5, i64 %arr_5_read, i64* %arr_6, i64 %arr_6_read, i64* %arr_7, i64 %arr_7_read, i64* %arr_8, i64 %arr_8_read, i64* %arr_9, i64 %arr_9_read)
+
+ST_6: empty (59)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:55
+:20  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([5 x i8]* @p_str7, i32 %tmp_2) nounwind
+
+ST_6: StgValue_56 (61)  [1/1] 0.00ns  loc: RTL_mergesort.prj/solution1/mergesort.c:52
+:22  br label %3
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('m') with incoming values : ('m', RTL_mergesort.prj/solution1/mergesort.c:54) [25]  (1.59 ns)
+
+ <State 2>: 5.8ns
+The critical path consists of the following:
+	'icmp' operation ('tmp', RTL_mergesort.prj/solution1/mergesort.c:49) [26]  (3.73 ns)
+	blocking operation 2.07 ns on control path)
+
+ <State 3>: 7.59ns
+The critical path consists of the following:
+	'phi' operation ('x') with incoming values : ('x', RTL_mergesort.prj/solution1/mergesort.c:52) [35]  (0 ns)
+	'add' operation ('tmp1', RTL_mergesort.prj/solution1/mergesort.c:54) [43]  (3.79 ns)
+	'add' operation ('tmp_5', RTL_mergesort.prj/solution1/mergesort.c:54) [44]  (3.79 ns)
+
+ <State 4>: 5.8ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_i', RTL_mergesort.prj/solution1/mergesort.c:41->RTL_mergesort.prj/solution1/mergesort.c:54) [46]  (3.73 ns)
+	'select' operation ('c', RTL_mergesort.prj/solution1/mergesort.c:41->RTL_mergesort.prj/solution1/mergesort.c:54) [47]  (2.07 ns)
+
+ <State 5>: 5.38ns
+The critical path consists of the following:
+	'call' operation (RTL_mergesort.prj/solution1/mergesort.c:54) to 'merge' [58]  (5.38 ns)
+
+ <State 6>: 2.32ns
+The critical path consists of the following:
+	'call' operation (RTL_mergesort.prj/solution1/mergesort.c:54) to 'merge' [58]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

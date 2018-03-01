@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="bellman_ford.c" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_bellman_ford.prj/solution1/bellman_ford.c"/>
+    <originFiles name="bellman_ford.h" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_bellman_ford.prj/solution1/bellman_ford.h"/>
+  </source>
+  <testbench>
+    <originFiles name="bellman_ford_test.c" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_bellman_ford.prj/solution1/bellman_ford_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

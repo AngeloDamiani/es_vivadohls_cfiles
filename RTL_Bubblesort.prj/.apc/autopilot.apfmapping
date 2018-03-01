@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="bubblesort.h" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_Bubblesort.prj/solution1/bubblesort.h"/>
+    <originFiles name="bubblesort.c" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_Bubblesort.prj/solution1/bubblesort.c"/>
+  </source>
+  <testbench>
+    <originFiles name="bubblesort_test.c" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_Bubblesort.prj/solution1/bubblesort_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,7 @@
+Running: xsim.dir/bellman_ford/xsimk -simmode gui -wdb bellman_ford.wdb -simrunnum 0 -socket 36381
+Design successfully loaded
+Design Loading Memory Usage: 37996 KB (Peak: 37996 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 119816 KB (Peak: 177264 KB)
+Simulation CPU Usage: 520 ms

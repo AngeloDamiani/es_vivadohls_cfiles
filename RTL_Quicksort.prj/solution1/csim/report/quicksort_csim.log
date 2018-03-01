@@ -1,0 +1,27 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../quicksort_test.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Gabriella' on host 'flexlm' (Windows NT_amd64 version 6.2) on Thu Mar 01 11:28:24 +0100 2018
+INFO: [HLS 200-10] In directory 'C:/Users/Gabriella/Quicksort.prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../quicksort.c in debug mode
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Gabriella' on host 'flexlm' (Windows NT_amd64 version 6.2) on Thu Mar 01 11:28:31 +0100 2018
+INFO: [HLS 200-10] In directory 'C:/Users/Gabriella/Quicksort.prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+1
+2
+2
+5
+23
+55
+56
+77
+99
+678
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

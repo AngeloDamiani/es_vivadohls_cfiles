@@ -1,0 +1,5 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "bubble_sort.autotb.vhd"
+vhdl xil_defaultlib "AESL_automem_arr.vhd"
+vhdl xil_defaultlib "bubble_sort.vhd"
+

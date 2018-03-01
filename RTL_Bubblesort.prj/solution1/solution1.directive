@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+  <sourceFile>
+    <directive functionName="bubble_sort" label="FOR2" functionLabel="">
+      <pragma name="LOOP_TRIPCOUNT">
+        <option name="max" value="10"/>
+      </pragma>
+    </directive>
+  </sourceFile>
+</AutoPilot:ProjectResources>

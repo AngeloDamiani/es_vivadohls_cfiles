@@ -1,0 +1,12 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "ip/xil_defaultlib/bellman_ford_ap_sitofp_4_no_dsp_64.vhd"
+vhdl xil_defaultlib "ip/xil_defaultlib/bellman_ford_ap_fcmp_0_no_dsp_32.vhd"
+vhdl xil_defaultlib "ip/xil_defaultlib/bellman_ford_ap_fadd_3_full_dsp_32.vhd"
+vhdl xil_defaultlib "bellman_ford_sitocud.vhd"
+vhdl xil_defaultlib "bellman_ford.autotb.vhd"
+vhdl xil_defaultlib "bellman_ford_faddbkb.vhd"
+vhdl xil_defaultlib "AESL_automem_graph.vhd"
+vhdl xil_defaultlib "bellman_ford_fcmpdEe.vhd"
+vhdl xil_defaultlib "AESL_automem_hwdist.vhd"
+vhdl xil_defaultlib "bellman_ford.vhd"
+

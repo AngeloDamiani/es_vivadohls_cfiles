@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-562] Loop 'Loop-1.1' (RTL_Quicksort.prj/quicksort.c:20) in function 'partition' has unknown bound because it has multiple exiting blocks." projectName="RTL_Quicksort.prj" solutionName="solution1" date="2018-03-01T12:20:58.929+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find source file quicksort.h; skipping it." projectName="RTL_Quicksort.prj" solutionName="solution1" date="2018-03-01T12:20:57.718+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'quicksort.h'" projectName="RTL_Quicksort.prj" solutionName="solution1" date="2018-03-01T12:20:57.498+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

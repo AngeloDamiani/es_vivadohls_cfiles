@@ -1,0 +1,31 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../mergesort_test.c in debug mode
+awk: read error (Is a directory)
+INFO: [HLS 200-10] Running '/mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'angelo' on host 'Alien15r3' (Linux_x86_64 version 4.10.0-33-generic) on Wed Feb 28 22:07:45 CET 2018
+INFO: [HLS 200-10] On os elementary OS 0.4.1 Loki
+INFO: [HLS 200-10] In directory '/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_mergesort.prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_angelo/121791519852065466306
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../mergesort.c in debug mode
+awk: read error (Is a directory)
+INFO: [HLS 200-10] Running '/mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'angelo' on host 'Alien15r3' (Linux_x86_64 version 4.10.0-33-generic) on Wed Feb 28 22:07:46 CET 2018
+INFO: [HLS 200-10] On os elementary OS 0.4.1 Loki
+INFO: [HLS 200-10] In directory '/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_mergesort.prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_angelo/122341519852066274969
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+2
+2
+8
+23
+41
+123
+126
+567
+671
+732
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

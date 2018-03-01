@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Feb 27 17:04:22 2018
+# Process ID: 30774
+# Current directory: /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/sim/vhdl
+# Command line: wbtcv -mode batch -source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/sim/vhdl/xsim.dir/selection_sort/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/sim/vhdl/webtalk.log
+# Journal file: /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/sim/vhdl/webtalk.jou
+#-----------------------------------------------------------
+source /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/sim/vhdl/xsim.dir/selection_sort/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/sim/vhdl/xsim.dir/selection_sort/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Feb 27 17:04:23 2018. For additional details about this file, please refer to the WebTalk help file at /mnt/B4A0CD3FA0CD08B6/Embedded/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Feb 27 17:04:23 2018...

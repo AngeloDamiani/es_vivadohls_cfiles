@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="selection_sort.h" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/selection_sort.h"/>
+    <originFiles name="selection_sort.c" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/selection_sort.c"/>
+  </source>
+  <testbench>
+    <originFiles name="selection_sort_test.c" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_selection_sort.prj/solution1/.tcls/selection_sort_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

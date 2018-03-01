@@ -1,0 +1,7 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "mergesort.autotb.vhd"
+vhdl xil_defaultlib "mergesort.vhd"
+vhdl xil_defaultlib "mergesort_mux_104bkb.vhd"
+vhdl xil_defaultlib "merge_x.vhd"
+vhdl xil_defaultlib "merge.vhd"
+

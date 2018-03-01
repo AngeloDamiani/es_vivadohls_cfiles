@@ -1,0 +1,341 @@
+
+
+================================================================
+== Vivado HLS Report for 'selection_sort'
+================================================================
+* Date:           Tue Feb 27 17:03:29 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        RTL_selection_sort.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.79|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   73|  361|   74|  362|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+-------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  |  Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count | Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+-------+----------+
+        |- Loop 1     |   72|  360|  8 ~ 40  |          -|          -|      9|    no    |
+        | + Loop 1.1  |    4|   36|         4|          -|          -| 1 ~ 9 |    no    |
+        +-------------+-----+-----+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 8
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+3 --> 
+	4  / (!exitcond)
+	7  / (exitcond)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	3  / true
+7 --> 
+	8  / true
+8 --> 
+	2  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_9 (2)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([10 x float]* %arr) nounwind, !map !13
+
+ST_1: StgValue_10 (3)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecTopModule([15 x i8]* @selection_sort_str) nounwind
+
+ST_1: StgValue_11 (4)  [1/1] 1.59ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:15
+:2  br label %1
+
+
+ <State 2>: 3.10ns
+ST_2: min_idx (6)  [1/1] 0.00ns
+:0  %min_idx = phi i4 [ 0, %0 ], [ %i, %3 ]
+
+ST_2: min_idx_1_cast1 (7)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:19
+:1  %min_idx_1_cast1 = zext i4 %min_idx to i8
+
+ST_2: exitcond1 (8)  [1/1] 3.10ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:15
+:2  %exitcond1 = icmp eq i4 %min_idx, -7
+
+ST_2: empty (9)  [1/1] 0.00ns
+:3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 9, i64 9, i64 9) nounwind
+
+ST_2: i (10)  [1/1] 2.35ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:17
+:4  %i = add i4 %min_idx, 1
+
+ST_2: StgValue_17 (11)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:15
+:5  br i1 %exitcond1, label %4, label %.preheader.preheader
+
+ST_2: StgValue_18 (13)  [1/1] 1.59ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:21
+.preheader.preheader:0  br label %.preheader
+
+ST_2: StgValue_19 (56)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:29
+:0  ret void
+
+
+ <State 3>: 4.64ns
+ST_3: index_1_assign (15)  [1/1] 0.00ns
+.preheader:0  %index_1_assign = phi i8 [ %j, %2 ], [ %min_idx_1_cast1, %.preheader.preheader ]
+
+ST_3: j_0_in (16)  [1/1] 0.00ns
+.preheader:1  %j_0_in = phi i8 [ %j_2, %2 ], [ %min_idx_1_cast1, %.preheader.preheader ]
+
+ST_3: j_2 (17)  [1/1] 2.32ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:21
+.preheader:2  %j_2 = add i8 %j_0_in, 1
+
+ST_3: exitcond (18)  [1/1] 2.91ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:21
+.preheader:3  %exitcond = icmp eq i8 %j_0_in, 9
+
+ST_3: empty_4 (19)  [1/1] 0.00ns
+.preheader:4  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 9, i64 0) nounwind
+
+ST_3: StgValue_25 (20)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:21
+.preheader:5  br i1 %exitcond, label %3, label %2
+
+ST_3: tmp (22)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:0  %tmp = sext i8 %j_2 to i64
+
+ST_3: arr_addr (23)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:1  %arr_addr = getelementptr [10 x float]* %arr, i64 0, i64 %tmp
+
+ST_3: arr_load (24)  [2/2] 2.32ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:2  %arr_load = load float* %arr_addr, align 4
+
+ST_3: tmp_2 (25)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:3  %tmp_2 = sext i8 %index_1_assign to i64
+
+ST_3: arr_addr_2 (26)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:4  %arr_addr_2 = getelementptr [10 x float]* %arr, i64 0, i64 %tmp_2
+
+ST_3: arr_load_1 (27)  [2/2] 2.32ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:5  %arr_load_1 = load float* %arr_addr_2, align 4
+
+ST_3: tmp_i (46)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:6->RTL_selection_sort.prj/solution1/selection_sort.c:27
+:0  %tmp_i = sext i8 %index_1_assign to i64
+
+ST_3: arr_addr_1 (47)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:6->RTL_selection_sort.prj/solution1/selection_sort.c:27
+:1  %arr_addr_1 = getelementptr [10 x float]* %arr, i64 0, i64 %tmp_i
+
+ST_3: b (48)  [2/2] 2.32ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:6->RTL_selection_sort.prj/solution1/selection_sort.c:27
+:2  %b = load float* %arr_addr_1, align 4
+
+ST_3: tmp_1_i (49)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:7->RTL_selection_sort.prj/solution1/selection_sort.c:27
+:3  %tmp_1_i = zext i4 %min_idx to i64
+
+ST_3: arr_addr_3 (50)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:7->RTL_selection_sort.prj/solution1/selection_sort.c:27
+:4  %arr_addr_3 = getelementptr [10 x float]* %arr, i64 0, i64 %tmp_1_i
+
+ST_3: arr_load_3 (51)  [2/2] 2.32ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:7->RTL_selection_sort.prj/solution1/selection_sort.c:27
+:5  %arr_load_3 = load float* %arr_addr_3, align 4
+
+
+ <State 4>: 2.32ns
+ST_4: arr_load (24)  [1/2] 2.32ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:2  %arr_load = load float* %arr_addr, align 4
+
+ST_4: arr_load_1 (27)  [1/2] 2.32ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:5  %arr_load_1 = load float* %arr_addr_2, align 4
+
+
+ <State 5>: 6.79ns
+ST_5: arr_load_to_int (28)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:6  %arr_load_to_int = bitcast float %arr_load to i32
+
+ST_5: tmp_1 (29)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:7  %tmp_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %arr_load_to_int, i32 23, i32 30)
+
+ST_5: tmp_3 (30)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:8  %tmp_3 = trunc i32 %arr_load_to_int to i23
+
+ST_5: arr_load_1_to_int (31)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:9  %arr_load_1_to_int = bitcast float %arr_load_1 to i32
+
+ST_5: tmp_4 (32)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:10  %tmp_4 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %arr_load_1_to_int, i32 23, i32 30)
+
+ST_5: tmp_5 (33)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:11  %tmp_5 = trunc i32 %arr_load_1_to_int to i23
+
+ST_5: notlhs (34)  [1/1] 2.91ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:12  %notlhs = icmp ne i8 %tmp_1, -1
+
+ST_5: notrhs (35)  [1/1] 3.20ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:13  %notrhs = icmp eq i23 %tmp_3, 0
+
+ST_5: notlhs2 (37)  [1/1] 2.91ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:15  %notlhs2 = icmp ne i8 %tmp_4, -1
+
+ST_5: notrhs3 (38)  [1/1] 3.20ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:16  %notrhs3 = icmp eq i23 %tmp_5, 0
+
+ST_5: tmp_9 (41)  [1/1] 6.79ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24
+:19  %tmp_9 = fcmp olt float %arr_load, %arr_load_1
+
+
+ <State 6>: 4.14ns
+ST_6: tmp_6 (36)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24 (grouped into LUT with out node tmp_s)
+:14  %tmp_6 = or i1 %notrhs, %notlhs
+
+ST_6: tmp_7 (39)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24 (grouped into LUT with out node tmp_s)
+:17  %tmp_7 = or i1 %notrhs3, %notlhs2
+
+ST_6: tmp_8 (40)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24 (grouped into LUT with out node tmp_s)
+:18  %tmp_8 = and i1 %tmp_6, %tmp_7
+
+ST_6: tmp_s (42)  [1/1] 2.07ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24 (out node of the LUT)
+:20  %tmp_s = and i1 %tmp_8, %tmp_9
+
+ST_6: j (43)  [1/1] 2.07ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:24 (out node of the LUT)
+:21  %j = select i1 %tmp_s, i8 %j_2, i8 %index_1_assign
+
+ST_6: StgValue_56 (44)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:23
+:22  br label %.preheader
+
+
+ <State 7>: 4.64ns
+ST_7: b (48)  [1/2] 2.32ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:6->RTL_selection_sort.prj/solution1/selection_sort.c:27
+:2  %b = load float* %arr_addr_1, align 4
+
+ST_7: arr_load_3 (51)  [1/2] 2.32ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:7->RTL_selection_sort.prj/solution1/selection_sort.c:27
+:5  %arr_load_3 = load float* %arr_addr_3, align 4
+
+ST_7: StgValue_59 (52)  [1/1] 2.32ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:7->RTL_selection_sort.prj/solution1/selection_sort.c:27
+:6  store float %arr_load_3, float* %arr_addr_1, align 4
+
+
+ <State 8>: 2.32ns
+ST_8: StgValue_60 (53)  [1/1] 2.32ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:8->RTL_selection_sort.prj/solution1/selection_sort.c:27
+:7  store float %b, float* %arr_addr_3, align 4
+
+ST_8: StgValue_61 (54)  [1/1] 0.00ns  loc: RTL_selection_sort.prj/solution1/selection_sort.c:17
+:8  br label %1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', RTL_selection_sort.prj/solution1/selection_sort.c:17) [6]  (1.59 ns)
+
+ <State 2>: 3.1ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', RTL_selection_sort.prj/solution1/selection_sort.c:17) [6]  (0 ns)
+	'icmp' operation ('exitcond1', RTL_selection_sort.prj/solution1/selection_sort.c:15) [8]  (3.1 ns)
+
+ <State 3>: 4.64ns
+The critical path consists of the following:
+	'phi' operation ('min_idx') with incoming values : ('min_idx_1_cast1', RTL_selection_sort.prj/solution1/selection_sort.c:19) ('j', RTL_selection_sort.prj/solution1/selection_sort.c:21) [16]  (0 ns)
+	'add' operation ('j', RTL_selection_sort.prj/solution1/selection_sort.c:21) [17]  (2.32 ns)
+	'getelementptr' operation ('arr_addr', RTL_selection_sort.prj/solution1/selection_sort.c:24) [23]  (0 ns)
+	'load' operation ('arr_load', RTL_selection_sort.prj/solution1/selection_sort.c:24) on array 'arr' [24]  (2.32 ns)
+
+ <State 4>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('arr_load', RTL_selection_sort.prj/solution1/selection_sort.c:24) on array 'arr' [24]  (2.32 ns)
+
+ <State 5>: 6.79ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_9', RTL_selection_sort.prj/solution1/selection_sort.c:24) [41]  (6.79 ns)
+
+ <State 6>: 4.14ns
+The critical path consists of the following:
+	'or' operation ('tmp_6', RTL_selection_sort.prj/solution1/selection_sort.c:24) [36]  (0 ns)
+	'and' operation ('tmp_8', RTL_selection_sort.prj/solution1/selection_sort.c:24) [40]  (0 ns)
+	'and' operation ('tmp_s', RTL_selection_sort.prj/solution1/selection_sort.c:24) [42]  (2.07 ns)
+	'select' operation ('j', RTL_selection_sort.prj/solution1/selection_sort.c:24) [43]  (2.07 ns)
+
+ <State 7>: 4.64ns
+The critical path consists of the following:
+	'load' operation ('arr_load_3', RTL_selection_sort.prj/solution1/selection_sort.c:7->RTL_selection_sort.prj/solution1/selection_sort.c:27) on array 'arr' [51]  (2.32 ns)
+	'store' operation (RTL_selection_sort.prj/solution1/selection_sort.c:7->RTL_selection_sort.prj/solution1/selection_sort.c:27) of variable 'arr_load_3', RTL_selection_sort.prj/solution1/selection_sort.c:7->RTL_selection_sort.prj/solution1/selection_sort.c:27 on array 'arr' [52]  (2.32 ns)
+
+ <State 8>: 2.32ns
+The critical path consists of the following:
+	'store' operation (RTL_selection_sort.prj/solution1/selection_sort.c:8->RTL_selection_sort.prj/solution1/selection_sort.c:27) of variable 'b', RTL_selection_sort.prj/solution1/selection_sort.c:6->RTL_selection_sort.prj/solution1/selection_sort.c:27 on array 'arr' [53]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

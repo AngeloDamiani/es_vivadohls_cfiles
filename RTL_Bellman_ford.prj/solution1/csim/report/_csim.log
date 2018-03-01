@@ -1,0 +1,30 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../bellman_ford_test.c in debug mode
+awk: read error (Is a directory)
+INFO: [HLS 200-10] Running '/mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'angelo' on host 'Alien15r3' (Linux_x86_64 version 4.10.0-33-generic) on Wed Feb 28 10:54:41 CET 2018
+INFO: [HLS 200-10] On os elementary OS 0.4.1 Loki
+INFO: [HLS 200-10] In directory '/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_bellman_ford.prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_angelo/104511519811681622426
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../bellman_ford.c in debug mode
+awk: read error (Is a directory)
+INFO: [HLS 200-10] Running '/mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'angelo' on host 'Alien15r3' (Linux_x86_64 version 4.10.0-33-generic) on Wed Feb 28 10:54:42 CET 2018
+INFO: [HLS 200-10] On os elementary OS 0.4.1 Loki
+INFO: [HLS 200-10] In directory '/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_bellman_ford.prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_angelo/105061519811682447806
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Makefile.rules:349: recipe for target 'csim.exe' failed
+obj/bellman_ford.o: In function `edge_counter':
+/tmp/apcc_db_angelo/105061519811682447806/bellman_ford.c:163: multiple definition of `edge_counter'
+obj/bellman_ford_test.o:/tmp/apcc_db_angelo/104511519811681622426/bellman_ford_test.c:169: first defined here
+obj/bellman_ford.o: In function `bellman_ford':
+/tmp/apcc_db_angelo/105061519811682447806/bellman_ford.c:934: multiple definition of `bellman_ford'
+obj/bellman_ford_test.o:/tmp/apcc_db_angelo/104511519811681622426/bellman_ford_test.c:940: first defined here
+collect2: ld returned 1 exit status
+make: *** [csim.exe] Error 1
+CRITICAL WARNING: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

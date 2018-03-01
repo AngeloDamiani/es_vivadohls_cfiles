@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Mar  1 12:18:42 2018
+# Process ID: 10845
+# Current directory: /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_bellman_ford.prj/solution1/sim/vhdl
+# Command line: xsim -mode tcl -source {xsim.dir/bellman_ford/xsim_script.tcl}
+# Log file: /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_bellman_ford.prj/solution1/sim/vhdl/xsim.log
+# Journal file: /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_bellman_ford.prj/solution1/sim/vhdl/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/bellman_ford/xsim_script.tcl
+# xsim {bellman_ford} -autoloadwcfg -tclbatch {bellman_ford.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source bellman_ford.tcl
+## run all
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 655 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 1035 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 1455 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 1575 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 1875 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 2035 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 2455 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 2715 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 2795 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 2955 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 3135 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 3215 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 3295 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 3415 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 3875 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 3975 ns  Iteration: 14  Process: /apatb_bellman_ford_top/AESL_inst_bellman_ford/bellman_ford_faddbkb_U1/bellman_ford_ap_fadd_3_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Note: simulation done!
+Time: 73295 ns  Iteration: 1  Process: /apatb_bellman_ford_top/generate_sim_done_proc  File: /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_bellman_ford.prj/solution1/sim/vhdl/bellman_ford.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 73295 ns  Iteration: 1  Process: /apatb_bellman_ford_top/generate_sim_done_proc  File: /home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_bellman_ford.prj/solution1/sim/vhdl/bellman_ford.autotb.vhd
+$finish called at time : 73295 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Mar  1 12:18:51 2018...

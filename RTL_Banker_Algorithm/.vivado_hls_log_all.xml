@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'banker_algorithm/max_q1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.938+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'banker_algorithm/max_d1' to 0." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.936+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'banker_algorithm/max_d1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.934+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'banker_algorithm/max_we1' to 0." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.931+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'banker_algorithm/max_we1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.929+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'banker_algorithm/max_ce1' to 0." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.926+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'banker_algorithm/max_ce1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.924+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'banker_algorithm/max_address1' to 0." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.922+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'banker_algorithm/max_address1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.920+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'banker_algorithm/max_q0' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.917+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'banker_algorithm/max_d0' to 0." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.914+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'banker_algorithm/max_d0' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.912+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'banker_algorithm/max_we0' to 0." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.910+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'banker_algorithm/max_we0' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.908+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'banker_algorithm/max_ce0' to 0." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.906+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'banker_algorithm/max_ce0' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.904+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'banker_algorithm/max_address0' to 0." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.903+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'banker_algorithm/max_address0' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:51:50.900+0100" type="Warning"/>
+      </synLog>
+      <simLog>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="RTL_Banker_Algorithm" solutionName="solution1" date="2018-03-01T11:52:31.240+0100" type="Warning"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

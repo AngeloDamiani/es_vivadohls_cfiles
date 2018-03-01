@@ -1,0 +1,1 @@
+lappend pragmaStatus0 {pragma "LOOP_TRIPCOUNT" source "/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_Bubblesort.prj/solution1/bubblesort.c" location "bubble_sort/FOR2" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}

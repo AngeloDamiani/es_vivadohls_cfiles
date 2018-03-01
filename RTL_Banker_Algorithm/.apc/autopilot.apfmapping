@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="banker_algorithm.c" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_Banker_Algorithm/solution1/banker_algorithm.c"/>
+    <originFiles name="banker_algorithm.h" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_Banker_Algorithm/solution1/banker_algorithm.h"/>
+  </source>
+  <testbench>
+    <originFiles name="banker_algorithm_test.c" path="/home/angelo/Desktop/SistemiEmbedded/VivadoHLSProject/ProjectFolder/RTL_Banker_Algorithm/solution1/banker_algorithm_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

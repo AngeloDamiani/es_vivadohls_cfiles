@@ -1,0 +1,350 @@
+
+
+================================================================
+== Vivado HLS Report for 'partition'
+================================================================
+* Date:           Thu Mar  1 12:20:58 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        RTL_Quicksort.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.53|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+-----+-----+----------+-----------+-----------+------+----------+
+        |               |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- PARWHILE     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + PARWHILE.1  |    ?|    ?|         2|          -|          -|     ?|    no    |
+        | + PARWHILE.2  |    ?|    ?|         2|          -|          -|     ?|    no    |
+        +---------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 11
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	4  / (!tmp & !tmp_7)
+	6  / (tmp) | (tmp_7)
+6 --> 
+	7  / true
+7 --> 
+	6  / (tmp_9)
+	8  / (!tmp_9 & tmp_1)
+	10  / (!tmp_9 & !tmp_1)
+8 --> 
+	9  / true
+9 --> 
+	3  / true
+10 --> 
+	11  / true
+11 --> 
+* FSM state operations: 
+
+ <State 1>: 2.32ns
+ST_1: inf (4)  [1/1] 0.00ns
+:0  %inf = alloca i64
+
+ST_1: sup (5)  [1/1] 0.00ns
+:1  %sup = alloca i64
+
+ST_1: init_read (7)  [1/1] 0.00ns
+:3  %init_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %init)
+
+ST_1: a_addr (8)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:14
+:4  %a_addr = getelementptr [10 x i64]* %a, i64 0, i64 %init_read
+
+ST_1: pivot (9)  [2/2] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:14
+:5  %pivot = load i64* %a_addr, align 8
+
+ST_1: StgValue_17 (11)  [1/1] 1.59ns  loc: RTL_Quicksort.prj/quicksort.c:12
+:7  store i64 %init_read, i64* %inf
+
+
+ <State 2>: 2.32ns
+ST_2: end_read (6)  [1/1] 0.00ns
+:2  %end_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %end_r)
+
+ST_2: pivot (9)  [1/2] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:14
+:5  %pivot = load i64* %a_addr, align 8
+
+ST_2: StgValue_20 (10)  [1/1] 1.59ns  loc: RTL_Quicksort.prj/quicksort.c:12
+:6  store i64 %end_read, i64* %sup
+
+ST_2: StgValue_21 (12)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:18
+:8  br label %1
+
+
+ <State 3>: 0.00ns
+ST_3: StgValue_22 (14)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:19
+:0  call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str) nounwind
+
+ST_3: StgValue_23 (15)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:20
+:1  br label %2
+
+
+ <State 4>: 3.73ns
+ST_4: inf_load (17)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:21
+:0  %inf_load = load i64* %inf
+
+ST_4: tmp (18)  [1/1] 3.73ns  loc: RTL_Quicksort.prj/quicksort.c:20
+:1  %tmp = icmp sgt i64 %inf_load, %end_read
+
+ST_4: StgValue_26 (19)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:20
+:2  br i1 %tmp, label %.critedge, label %3
+
+ST_4: a_addr_1 (21)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:20
+:0  %a_addr_1 = getelementptr [10 x i64]* %a, i64 0, i64 %inf_load
+
+ST_4: a_load (22)  [2/2] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:20
+:1  %a_load = load i64* %a_addr_1, align 8
+
+
+ <State 5>: 6.05ns
+ST_5: a_load (22)  [1/2] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:20
+:1  %a_load = load i64* %a_addr_1, align 8
+
+ST_5: tmp_7 (23)  [1/1] 3.73ns  loc: RTL_Quicksort.prj/quicksort.c:20
+:2  %tmp_7 = icmp sgt i64 %a_load, %pivot
+
+ST_5: StgValue_31 (24)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:20
+:3  br i1 %tmp_7, label %.critedge, label %4
+
+ST_5: inf_1 (26)  [1/1] 3.79ns  loc: RTL_Quicksort.prj/quicksort.c:21
+:0  %inf_1 = add nsw i64 %inf_load, 1
+
+ST_5: StgValue_33 (27)  [1/1] 1.59ns  loc: RTL_Quicksort.prj/quicksort.c:21
+:1  store i64 %inf_1, i64* %inf
+
+ST_5: StgValue_34 (28)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:21
+:2  br label %2
+
+ST_5: StgValue_35 (30)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:23
+.critedge:0  br label %5
+
+
+ <State 6>: 2.32ns
+ST_6: sup_load (32)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:24
+:0  %sup_load = load i64* %sup
+
+ST_6: a_addr_2 (33)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:23
+:1  %a_addr_2 = getelementptr [10 x i64]* %a, i64 0, i64 %sup_load
+
+ST_6: a_load_1 (34)  [2/2] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:23
+:2  %a_load_1 = load i64* %a_addr_2, align 8
+
+
+ <State 7>: 7.53ns
+ST_7: a_load_1 (34)  [1/2] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:23
+:2  %a_load_1 = load i64* %a_addr_2, align 8
+
+ST_7: tmp_9 (35)  [1/1] 3.73ns  loc: RTL_Quicksort.prj/quicksort.c:23
+:3  %tmp_9 = icmp sgt i64 %a_load_1, %pivot
+
+ST_7: StgValue_41 (36)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:23
+:4  br i1 %tmp_9, label %6, label %7
+
+ST_7: sup_1 (38)  [1/1] 3.79ns  loc: RTL_Quicksort.prj/quicksort.c:24
+:0  %sup_1 = add nsw i64 %sup_load, -1
+
+ST_7: StgValue_43 (39)  [1/1] 1.59ns  loc: RTL_Quicksort.prj/quicksort.c:24
+:1  store i64 %sup_1, i64* %sup
+
+ST_7: StgValue_44 (40)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:24
+:2  br label %5
+
+ST_7: tmp_s (42)  [1/1] 3.79ns  loc: RTL_Quicksort.prj/quicksort.c:27
+:0  %tmp_s = add nsw i64 %sup_load, 1
+
+ST_7: tmp_1 (43)  [1/1] 3.73ns  loc: RTL_Quicksort.prj/quicksort.c:27
+:1  %tmp_1 = icmp slt i64 %inf_load, %tmp_s
+
+ST_7: StgValue_47 (44)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:27
+:2  br i1 %tmp_1, label %8, label %9
+
+ST_7: a_addr_3 (46)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:7->RTL_Quicksort.prj/quicksort.c:28
+:0  %a_addr_3 = getelementptr [10 x i64]* %a, i64 0, i64 %inf_load
+
+ST_7: b (47)  [2/2] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:7->RTL_Quicksort.prj/quicksort.c:28
+:1  %b = load i64* %a_addr_3, align 8
+
+ST_7: b_1 (52)  [2/2] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:7->RTL_Quicksort.prj/quicksort.c:34
+:0  %b_1 = load i64* %a_addr, align 8
+
+
+ <State 8>: 2.32ns
+ST_8: b (47)  [1/2] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:7->RTL_Quicksort.prj/quicksort.c:28
+:1  %b = load i64* %a_addr_3, align 8
+
+ST_8: StgValue_52 (48)  [1/1] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:8->RTL_Quicksort.prj/quicksort.c:28
+:2  store i64 %a_load_1, i64* %a_addr_3, align 8
+
+
+ <State 9>: 2.32ns
+ST_9: StgValue_53 (49)  [1/1] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:9->RTL_Quicksort.prj/quicksort.c:28
+:3  store i64 %b, i64* %a_addr_2, align 8
+
+ST_9: StgValue_54 (50)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:32
+:4  br label %1
+
+
+ <State 10>: 2.32ns
+ST_10: b_1 (52)  [1/2] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:7->RTL_Quicksort.prj/quicksort.c:34
+:0  %b_1 = load i64* %a_addr, align 8
+
+ST_10: StgValue_56 (53)  [1/1] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:8->RTL_Quicksort.prj/quicksort.c:34
+:1  store i64 %a_load_1, i64* %a_addr, align 8
+
+
+ <State 11>: 2.32ns
+ST_11: StgValue_57 (54)  [1/1] 2.32ns  loc: RTL_Quicksort.prj/quicksort.c:9->RTL_Quicksort.prj/quicksort.c:34
+:2  store i64 %b_1, i64* %a_addr_2, align 8
+
+ST_11: StgValue_58 (55)  [1/1] 0.00ns  loc: RTL_Quicksort.prj/quicksort.c:35
+:3  ret i64 %sup_load
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.32ns
+The critical path consists of the following:
+	wire read on port 'init' [7]  (0 ns)
+	'getelementptr' operation ('a_addr', RTL_Quicksort.prj/quicksort.c:14) [8]  (0 ns)
+	'load' operation ('pivot', RTL_Quicksort.prj/quicksort.c:14) on array 'a' [9]  (2.32 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('pivot', RTL_Quicksort.prj/quicksort.c:14) on array 'a' [9]  (2.32 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 3.73ns
+The critical path consists of the following:
+	'load' operation ('index_1', RTL_Quicksort.prj/quicksort.c:21) on local variable 'init' [17]  (0 ns)
+	'icmp' operation ('tmp', RTL_Quicksort.prj/quicksort.c:20) [18]  (3.73 ns)
+
+ <State 5>: 6.05ns
+The critical path consists of the following:
+	'load' operation ('a_load', RTL_Quicksort.prj/quicksort.c:20) on array 'a' [22]  (2.32 ns)
+	'icmp' operation ('tmp_7', RTL_Quicksort.prj/quicksort.c:20) [23]  (3.73 ns)
+
+ <State 6>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('index_2', RTL_Quicksort.prj/quicksort.c:24) on local variable 'end' [32]  (0 ns)
+	'getelementptr' operation ('a_addr_2', RTL_Quicksort.prj/quicksort.c:23) [33]  (0 ns)
+	'load' operation ('a_load_1', RTL_Quicksort.prj/quicksort.c:23) on array 'a' [34]  (2.32 ns)
+
+ <State 7>: 7.53ns
+The critical path consists of the following:
+	'add' operation ('tmp_s', RTL_Quicksort.prj/quicksort.c:27) [42]  (3.79 ns)
+	'icmp' operation ('tmp_1', RTL_Quicksort.prj/quicksort.c:27) [43]  (3.73 ns)
+
+ <State 8>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('b', RTL_Quicksort.prj/quicksort.c:7->RTL_Quicksort.prj/quicksort.c:28) on array 'a' [47]  (2.32 ns)
+
+ <State 9>: 2.32ns
+The critical path consists of the following:
+	'store' operation (RTL_Quicksort.prj/quicksort.c:9->RTL_Quicksort.prj/quicksort.c:28) of variable 'b', RTL_Quicksort.prj/quicksort.c:7->RTL_Quicksort.prj/quicksort.c:28 on array 'a' [49]  (2.32 ns)
+
+ <State 10>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('b', RTL_Quicksort.prj/quicksort.c:7->RTL_Quicksort.prj/quicksort.c:34) on array 'a' [52]  (2.32 ns)
+
+ <State 11>: 2.32ns
+The critical path consists of the following:
+	'store' operation (RTL_Quicksort.prj/quicksort.c:9->RTL_Quicksort.prj/quicksort.c:34) of variable 'b', RTL_Quicksort.prj/quicksort.c:7->RTL_Quicksort.prj/quicksort.c:34 on array 'a' [54]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Global scalar 'h' will not be exposed as RTL port." projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:46.847+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-67] Unable to satisfy pipeline directive: subfunction 'merge' is not pipelined." projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:46.542+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled." projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:46.411+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] the outer loop is not a perfect loop." projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:46.290+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'FOR1' (RTL_mergesort.prj/solution1/mergesort.c:50:3) in function 'mergesort' : " projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:46.176+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'MERGE_FOR3' (RTL_mergesort.prj/solution1/mergesort.c:35) in function 'merge' completely: variable loop bound." projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:46.053+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'MERGE_FOR2' (RTL_mergesort.prj/solution1/mergesort.c:30) in function 'merge' completely: variable loop bound." projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:46.048+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'MERGE_FOR1' (RTL_mergesort.prj/solution1/mergesort.c:25) in function 'merge' completely: variable loop bound." projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:46.043+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'MERGE_WHILE' (RTL_mergesort.prj/solution1/mergesort.c:14) in function 'merge' completely: variable loop bound." projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:46.036+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'LOOP_TRIPCOUNT' cannot be applied: Label 'merge_label2' does not exist in function 'merge'. " projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:45.480+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'LOOP_TRIPCOUNT' cannot be applied: Label 'merge_label1' does not exist in function 'merge'. " projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:45.474+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'LOOP_TRIPCOUNT' cannot be applied: Label 'merge_label0' does not exist in function 'merge'. " projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:45.468+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:44.116+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library '/mnt/B4A0CD3FA0CD08B6/Embedded/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="RTL_mergesort.prj" solutionName="solution2" date="2018-03-01T10:51:43.969+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global scalar 'h' will not be exposed as RTL port." projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:46.174+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-67] Unable to satisfy pipeline directive: subfunction 'merge' is not pipelined." projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:46.001+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled." projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:45.921+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] the outer loop is not a perfect loop." projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:45.871+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'FOR1' (RTL_mergesort.prj/solution1/mergesort.c:50:3) in function 'mergesort' : " projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:45.803+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'MERGE_FOR3' (RTL_mergesort.prj/solution1/mergesort.c:35) in function 'merge' completely: variable loop bound." projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:45.728+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'MERGE_FOR2' (RTL_mergesort.prj/solution1/mergesort.c:30) in function 'merge' completely: variable loop bound." projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:45.709+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'MERGE_FOR1' (RTL_mergesort.prj/solution1/mergesort.c:25) in function 'merge' completely: variable loop bound." projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:45.708+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'MERGE_WHILE' (RTL_mergesort.prj/solution1/mergesort.c:14) in function 'merge' completely: variable loop bound." projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:45.706+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'LOOP_TRIPCOUNT' cannot be applied: Label 'merge_label2' does not exist in function 'merge'. " projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:45.522+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'LOOP_TRIPCOUNT' cannot be applied: Label 'merge_label1' does not exist in function 'merge'. " projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:45.521+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'LOOP_TRIPCOUNT' cannot be applied: Label 'merge_label0' does not exist in function 'merge'. " projectName="RTL_mergesort.prj" solutionName="solution1" date="2018-02-28T22:51:45.518+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

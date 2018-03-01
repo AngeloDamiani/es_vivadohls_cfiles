@@ -1,0 +1,7 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "banker_algorithm.vhd"
+vhdl xil_defaultlib "banker_algorithm.autotb.vhd"
+vhdl xil_defaultlib "AESL_automem_available.vhd"
+vhdl xil_defaultlib "AESL_automem_allocated.vhd"
+vhdl xil_defaultlib "AESL_automem_need.vhd"
+
